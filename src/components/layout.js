@@ -10,6 +10,7 @@ import ProductPage from "./ProductPage/ProductPage.js";
 import NavTrail from "./NavTrail/NavTrail";
 import ProductPagination from "./ProductPage/ProductPagination.js";
 
+
 const Layout = ({ pageTitle, children }) => {
   return (
     <div>
@@ -20,8 +21,8 @@ const Layout = ({ pageTitle, children }) => {
       </div>
       <main>
         <h1> {pageTitle}</h1>
-        <ProductPage></ProductPage>
-        <ProductPagination></ProductPagination>
+        <ProductPage> </ProductPage>
+        <ProductPagination> </ProductPagination>
         {children}
       </main>
       <FooterMenu> </FooterMenu>

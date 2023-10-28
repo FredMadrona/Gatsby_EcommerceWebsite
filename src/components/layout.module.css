@@ -1,12 +1,5 @@
 /* layout.module.css */
 
-/* Custom class for outlined icons */
-.OutlinedIcon {
-  stroke: #007bff; /* Set the outline color to the current text color */
-  stroke-width: 60; /* Adjust the outline width as needed */
-  fill: none; /*Remove the fill color (makes the icon outlined) */
-}
-
 /* Additional styles for your icons */
 .text-primary {
   color: #007bff; /* Define your primary text color */
