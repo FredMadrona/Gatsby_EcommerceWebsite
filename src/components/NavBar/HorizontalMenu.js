@@ -14,7 +14,7 @@ const HorizontalMenu = () => {
   ];
 
   return (
-    <nav className=" w-full py-1 px-1 bg-primary grid grid-cols-12">
+    <nav className=" w-full py-1 px-1 z-10 bg-primary grid grid-cols-12">
       <div className='col-span-1'> </div>
       <div className="col-span-10 grid grid-cols-9 justify-evenly">
         {menuItems.map((item, index) => (

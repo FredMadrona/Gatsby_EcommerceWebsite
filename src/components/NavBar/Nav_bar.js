@@ -7,7 +7,7 @@ import MenuButton from "../NavBar/MenuButton";
 
 const Navbar = () => {
   return (
-    <nav className=" sticky top-0 w-full  bg-white p-1 grid grid-cols-12 justify-between items-center gap-4 h-24 lg:px-1/4">
+    <nav className=" sticky top-0 w-full z-50 bg-white p-1 grid grid-cols-12 justify-between items-center gap-4 h-24 lg:px-1/4">
             
       {/* Column 1: Logo */}
       <div className="flex items-center justify-start col-span-4  ">
@@ -29,10 +29,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="md:flex hidden items-start justify-center gap-4 w-full md:col-span-4 col-span-2">
-        <div className="lg:flex items-center gap-2 mr-2">
-          <BsPerson className="h-6 w-6 text-primary" />
-          <button className="text-primary text-md font-semibold">
+      <div className="md:flex flex-no-wrap hidden items-start justify-center gap-4 w-full md:col-span-4 col-span-2  ">
+        <div className="flex items-center  gap-2 lg:mr-5">
+          <BsPerson className="h-6 w-6 text-primary " />
+          <button className="text-primary text-md font-semibold ">
             Login / Sign up
           </button>
         </div>

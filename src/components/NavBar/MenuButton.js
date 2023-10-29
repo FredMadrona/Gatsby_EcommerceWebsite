@@ -11,12 +11,12 @@ const MenuButton = () => {
   };
 
   return (
-    <div className="md:hidden flex justify-center ">
+    <div className="md:hidden flex justify-center  ">
       <button className="text-primary text-lg " onClick={toggleMenu}>
         <FaBars />
       </button>
       {menuVisible && (
-        <div className="bg-primary justify-start p-4 absolute top-20 left-0 right-0 z-10 h-1/2">
+        <div className="bg-primary justify-start z-50 p-4 absolute top-20 left-0 right-0 z-10 h-1/2">
           {/* Menu content goes here */}
           <ul className="space-y-2 ">
             <li>
