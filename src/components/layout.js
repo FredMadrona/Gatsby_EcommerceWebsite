@@ -9,7 +9,7 @@ import PaymentFooter from "./Footer/PaymentFooter.js";
 import ProductPage from "./ProductPage/ProductPage.js";
 import NavTrail from "./NavTrail/NavTrail";
 import ProductPagination from "./ProductPage/ProductPagination.js";
-
+import DropdownMenu from "./NavBar/DropdownMenu.js";
 
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -17,6 +17,7 @@ const Layout = ({ pageTitle, children }) => {
       <Navbar> </Navbar>
       <div className="pt-5">
         <HorizontalMenu> </HorizontalMenu>
+        <DropdownMenu></DropdownMenu>
         <NavTrail> </NavTrail>
       </div>
       <main>

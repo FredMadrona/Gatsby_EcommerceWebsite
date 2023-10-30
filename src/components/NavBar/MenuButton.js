@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { FaBars} from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { BsCart2, BsPerson } from "react-icons/bs";  
+
+
 
 const MenuButton = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -11,22 +13,24 @@ const MenuButton = () => {
   };
 
   return (
-    <div className="md:hidden flex justify-center  ">
-      <button className="text-primary text-lg " onClick={toggleMenu}>
-        <FaBars />
+    <div className="md:hidden flex justify-center">
+      <button className="text-primary text-lg" onClick={toggleMenu}>
+        {menuVisible ? <FaTimes /> : <FaBars/>}
       </button>
-      {menuVisible && (
-        <div className="bg-primary justify-start z-50 p-4 absolute top-20 left-0 right-0 z-10 h-1/2">
-          {/* Menu content goes here */}
-          <ul className="space-y-2 ">
-            <li>
-              <div className="flex w-full items-center space-x-8 ">
-                <BsPerson className="text-white h-6 w-6" />
-                <button className="text-white font-sm">Login / Sign up</button>
-              </div>{" "}
-            </li>
-            <li>
-            <div className="flex w-full items-center space-x-8 ">
+      <div
+        className={`${
+          menuVisible ? "flex" : "hidden"
+        } transition-opacity duration-300 ease-in-out bg-primary justify-start z-50 p-3 absolute top-20 left-0 right-0 z-10 h-200`}
+      >
+        <ul className="space-y-2">
+          <li>
+            <div className="flex w-full items-center space-x-8 hover:font-bold">
+              <BsPerson className="text-white h-6 w-6" />
+              <button className="text-white font-sm">Login / Sign up</button>
+            </div>
+          </li>
+          <li>
+            <div className="flex w-full items-center space-x-8 hover:font-bold hover:cursor-pointer">
               <svg
                 className="h-8 w-8 text-white cursor-pointer pt-1"
                 fill="none"
@@ -38,11 +42,10 @@ const MenuButton = () => {
                 <BsCart2 className="text-white h-6 w-6" />
               </svg>
               <p className="text-white">0.00</p>
-              </div>
-                 </li>
-          </ul>
-        </div>
-      )}
+            </div>
+          </li>
+        </ul>
+    </div>
     </div>
   );
 };

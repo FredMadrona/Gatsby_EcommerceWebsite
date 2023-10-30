@@ -62,21 +62,21 @@ const ProductGrid = () => {
       name: "Stainless Steel Bathroom Hardware lock Yellow",
       color: "Yellow",
       price: "Php 1,000.00",
-      img: data.allFile.nodes[1].childImageSharp.fluid,
+      img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
       id: 7,
       name: "Exposed Door Closer Series Stone",
       color: "Stone",
       price: "Php 500.00",
-      img: data.allFile.nodes[2].childImageSharp.fluid,
+      img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
       id: 8,
       name: "Intelligent Door Lock N6700 Black",
       color: "Black",
       price: "Php 800.00",
-      img: data.allFile.nodes[3].childImageSharp.fluid,
+      img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
       id: 9,
@@ -120,22 +120,22 @@ const ProductGrid = () => {
 
 
   return (
-    <div className="bg-gray-100 p-4 grid grid-cols-8 gap-4 ">
-    <div className="col-span-1"></div>
-    {/* Filter Checkbox */}
-    <div className="lg:col-span-1 col-span-2 flex flex-col items-start ">
+    <div className="bg-gray-100 p-4 grid grid-cols-9 gap-4 ">
+      <div className="col-span-1"></div>
+        {/* Filter Checkbox */}
+    <div className=" col-span-3 lg:col-span-2 flex flex-col start  items-start">
       <h3 className=" text-md text-left text-primary font-semibold cursor-pointer">
         Shopping Options
       </h3>
-      <div className="space-y-2 mt-5 w-full">
+      <div className="space-y-2  mt-5 w-full pr-5 ">
         <div className="flex justify-between align-center mb-3 ">
           <h2 className="font-semibold "> Brand </h2>
-          <FaChevronUp className="mt-1"> </FaChevronUp>
+          <FaChevronUp className="mt-1 hover:cursor-pointer"> </FaChevronUp>
         </div>
 
         <div className="flex justify-between align-center mb-3 ">
           <h2 className="font-semibold"> Colour </h2>
-          <FaChevronDown> </FaChevronDown>
+          <FaChevronDown className="mt-1 hover:cursor-pointer"> </FaChevronDown>
         </div>
         <label className="flex items-center text-left">
           <input
@@ -229,15 +229,15 @@ const ProductGrid = () => {
         </label>
         <div className="flex justify-between align-center mb-3 ">
           <h2 className="font-semibold"> Price </h2>
-          <FaChevronUp className="mt-1"> </FaChevronUp>
+          <FaChevronUp className="mt-1 hover:cursor-pointer"> </FaChevronUp>
         </div>
         <div className="flex justify-between align-center mb-3 ">
           <h2 className="font-semibold"> Feature </h2>
-          <FaChevronUp className="mt-1"> </FaChevronUp>
+          <FaChevronUp className="mt-1 hover:cursor-pointer"> </FaChevronUp>
         </div>
         <div className="flex justify-between align-center  w-full">
           <h2 className="font-semibold"> Categories </h2>
-          <FaChevronUp className="mt-1"> </FaChevronUp>
+          <FaChevronUp className="mt-1 hover:cursor-pointer"> </FaChevronUp>
         </div>
         {/* Add more checkbox options for colors as needed */}
       </div>

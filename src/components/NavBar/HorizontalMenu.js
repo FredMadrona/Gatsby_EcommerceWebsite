@@ -7,16 +7,16 @@ const HorizontalMenu = () => {
     'Tile Products',
     'Smart Devices',
     'Outdoor Lighting',
-    'Safety Production Products',
+    'Safety Products',
     'Pipeline',
     'LED Screen',
     'More',
   ];
 
   return (
-    <nav className=" w-full py-1 px-1 z-10 bg-primary grid grid-cols-12">
+    <nav className=" w-full py-1 px-1 z-10 bg-primary md:grid hidden grid-cols-12">
       <div className='col-span-1'> </div>
-      <div className="col-span-10 grid grid-cols-9 justify-evenly">
+      <div className="col-span-10 grid grid-cols-9 justify-evenly  ml-5">
         {menuItems.map((item, index) => (
           <div
             key={index}

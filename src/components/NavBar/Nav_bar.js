@@ -7,7 +7,7 @@ import MenuButton from "../NavBar/MenuButton";
 
 const Navbar = () => {
   return (
-    <nav className=" sticky top-0 w-full z-50 bg-white p-1 grid grid-cols-12 justify-between items-center gap-4 h-24 lg:px-1/4">
+    <nav className="sticky top-0 w-full z-50 bg-white p-1 grid grid-cols-12 justify-between items-center gap-4 h-20 lg:px-1/4">
             
       {/* Column 1: Logo */}
       <div className="flex items-center justify-start col-span-4  ">
