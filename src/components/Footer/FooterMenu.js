@@ -6,60 +6,60 @@ const FooterMenu = () => {
       <div className='mx-5'></div>
     <div className="container flex flex-wrap justify-center items-start ml-10%">
       <div className="w-full sm:w-1/2 md:w-1/5 mb-4 sm:mb-0 grid justify-center">
-        <h2 className="text-md font-bold mb-2">INFORMATION </h2>
+        <h2 className="text-md font-bold mb-2 cursor-pointer">INFORMATION </h2>
         <br></br>
-        <div className="flex text-sm text-gray-500 "> {/* Wrap ul in a div with flex class */}
+        <div className="flex text-sm text-gray-500 "> 
           <ul>
-            <li className="mb-2" >About Us</li>
-            <li className="mb-2" >Orders and Returns</li>
-            <li className="mb-2" >Contact Us</li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer" >About Us</li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer" >Orders and Returns</li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer" >Contact Us</li>
           </ul>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/5 mb-4 sm:mb-0 grid justify-center">
-        <h2 className="text-md font-bold mb-2">CUSTOMER CARE </h2>
+        <h2 className="text-md font-bold mb-2 cursor-pointer">CUSTOMER CARE </h2>
         <br></br>
-        <div className="flex text-sm text-gray-500"> {/* Wrap ul in a div with flex class */}
+        <div className="flex text-sm text-gray-500"> 
           <ul>
-            <li className="mb-2" > Help Center </li>
-            <li className="mb-2" > How To Buy</li>
-            <li className="mb-2" > How To Return </li>
-            <li className="mb-2 "> Shipping & Delivery </li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer" > Help Center </li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer" > How To Buy</li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer" > How To Return </li>
+            <li className="mb-2 hover:text-gray-800 cursor-pointer"> Shipping & Delivery </li>
           </ul>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/5 mb-4 sm:mb-0 grid justify-center">
-        <h2 className="text-md font-bold mb-2">MY ACCOUNT </h2>
+        <h2 className="text-md font-bold mb-2 cursor-pointer hover:text-underline">MY ACCOUNT </h2>
         <br></br>
         <div className="flex  text-sm text-gray-500"> {/* Wrap ul in a div with flex class */}
           <ul>
-            <li className="mb-2" > Sign In </li>
-            <li className="mb-2" > View Cart </li>
-            <li className="mb-2" > My Wishlist </li>
-            <li className="mb-2"> Track My Order </li>
-            <li className="mb-2"> Help </li>
+            <li className="mb-2 cursor-pointer hover:text-gray-800" > Sign In </li>
+            <li className="mb-2 cursor-pointer hover:text-gray-800" > View Cart </li>
+            <li className="mb-2 cursor-pointer hover:text-gray-800" > My Wishlist </li>
+            <li className="mb-2 cursor-pointer hover:text-gray-800"> Track My Order </li>
+            <li className="mb-2 cursor-pointer hover:text-gray-800"> Help </li>
           </ul>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/5 mb-4 sm:mb-0 grid justify-center">
-        <h2 className="text-md font-bold mb-2">MY ACCOUNT  </h2>
+        <h2 className="text-md font-bold mb-2 cursor-pointer">MY ACCOUNT  </h2>
         <br></br>
-        <div className="flex text-sm text-gray-500"> {/* Wrap ul in a div with flex class */}
+        <div className="flex text-sm text-gray-500"> 
           <ul>
-            <li className="mb-2" >Old Albay District, </li>
-            <li className="mb-5" >Legazpi City</li>
-            <li className="mb-2" >Mon - Fri 9:00am - 5pm </li>
-            <li><p className="text-red-500 font-bold"> CALL US:</p> <span className="text-black font-semibold"> +63 052 1234567 </span>
+            <li className="mb-2 cursor-pointer hover:text-gray-800" >Old Albay District, </li>
+            <li className="mb-5 cursor-pointer hover:text-gray-800" >Legazpi City</li>
+            <li className="mb-2 cursor-pointer hover:text-gray-800" >Mon - Fri 9:00am - 5pm </li>
+            <li><p className="text-red-500 font-bold cursor-pointer"> CALL US:</p> <span className="text-black font-semibold cursor-pointer"> +63 052 1234567 </span>
 </li>
             </ul>
         </div>
       </div>
       <div className="w-full sm:w-1/2 md:w-1/5 mb-4 sm:mb-0 grid justify-center">
-        <h2 className="text-md font-bold mb-2">NEWSLETTER </h2>
+        <h2 className="text-md font-bold mb-2 cursor-pointer">NEWSLETTER </h2>
         <br></br>
         <div className="flex text-sm text-gray-500">
   <ul>
-    <li className="mb-2">Subscribe to our mailing list</li>
+    <li className="mb-2 cursor-pointer hover:text-gray-800">Subscribe to our mailing list</li>
     <li className="mb-2">
       <input
         type="email"

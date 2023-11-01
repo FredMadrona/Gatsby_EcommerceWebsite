@@ -19,12 +19,16 @@ const ProductGrid = () => {
     }
   `);
 
+  //Product Details
   const allProducts = [
     {
       id: 1,
       name: "Stainless Steel Bathroom Hardware Black",
       color: "Black",
       price: "Php 1,000.00",
+      brand: "X",
+      feature: "Feature A",
+      category: "Category A",
       img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
@@ -32,6 +36,9 @@ const ProductGrid = () => {
       name: "Exposed Door Closer Series Navy",
       color: "Navy",
       price: "Php 500.00",
+      brand: "Y",
+      feature: "Feature B",
+      category: "Category B",
       img: data.allFile.nodes[1].childImageSharp.fluid,
     },
     {
@@ -39,6 +46,9 @@ const ProductGrid = () => {
       name: "Intelligent Door Lock N6700 Khaki",
       color: "Khaki",
       price: "Php 800.00",
+      brand: "Z",
+      feature: "Feature C",
+      category: "Category C",
       img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
@@ -46,6 +56,9 @@ const ProductGrid = () => {
       name: "Stainless Steel Bathroom Hardware lock Wheat",
       color: "Wheat",
       price: "Php 500.00",
+      brand: "Y",
+      feature: "Feature A",
+      category: "Category B",
       img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
@@ -53,6 +66,9 @@ const ProductGrid = () => {
       name: "Stainless Steel Bathroom Hardware Orange/Navy",
       color: "Orange/Navy",
       price: "Php 500.00",
+      brand: "X",
+      feature: "Feature B",
+      category: "Category C",
       img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
@@ -60,6 +76,9 @@ const ProductGrid = () => {
       name: "Stainless Steel Bathroom Hardware lock Yellow",
       color: "Yellow",
       price: "Php 1,000.00",
+      brand: "Z",
+      feature: "Feature C",
+      category: "Category A",
       img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
@@ -67,6 +86,9 @@ const ProductGrid = () => {
       name: "Exposed Door Closer Series Stone",
       color: "Stone",
       price: "Php 500.00",
+      brand: "X",
+      feature: "Feature A",
+      category: "Category C",
       img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
@@ -74,6 +96,9 @@ const ProductGrid = () => {
       name: "Intelligent Door Lock N6700 Black",
       color: "Black",
       price: "Php 800.00",
+      brand: "Y",
+      feature: "Feature B",
+      category: "Category B",
       img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
@@ -81,39 +106,86 @@ const ProductGrid = () => {
       name: "Exposed Door Closer Series Navy",
       color: "Navy",
       price: "Php 500.00",
+      brand: "Z",
+      feature: "Feature C",
+      category: "Category A",
       img: data.allFile.nodes[1].childImageSharp.fluid,
     },
   ];
 
-  const [selectedColors, setSelectedColors] = useState([]); // State for selected colors
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedColors, setSelectedColors] = useState([]);
+  const [selectedFeatures, setSelectedFeatures] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState([]);
+
   const [products, setProducts] = useState([]); // State for filtered products
 
   const filterProducts = () => {
-    if (selectedColors.length === 0) {
-      setProducts(allProducts); // Show all products when no color is selected
-    } else {
-      const filteredProducts = allProducts.filter((product) =>
+    let filteredProducts = allProducts;
+
+    // Filter by selected colors
+    if (selectedColors.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
         selectedColors.includes(product.color)
       );
-      setProducts(filteredProducts);
     }
+
+    // Filter by selected brands
+    if (selectedBrands.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedBrands.includes(product.brand)
+      );
+    }
+
+    // Filter by selected feature
+    if (selectedCategory.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedCategory.includes(product.category)
+      );
+    }
+
+
+    setProducts(filteredProducts);
   };
 
   useEffect(() => {
     filterProducts(); // Call the filter function when the component mounts or when 'selectedColors' changes
-  }, [selectedColors]);
+  }, [selectedColors, selectedBrands, selectedFeatures, selectedCategory]);
 
-  const handleColorChange = (event) => {
+  const handleFilterChange = (event, filterType) => {
     const value = event.target.value;
-    if (selectedColors.includes(value)) {
-      // If the color is already selected, remove it
-      setSelectedColors(selectedColors.filter((color) => color !== value));
+
+    // Create a new function to handle changes for different filter types
+    if (filterType === "color") {
+      if (selectedColors.includes(value)) {
+        setSelectedColors(selectedColors.filter((color) => color !== value));
+      } else {
+        setSelectedColors([...selectedColors, value]);
+      }
+    } else if (filterType === "brand") {
+      if (selectedBrands.includes(value)) {
+        setSelectedBrands(selectedBrands.filter((brand) => brand !== value));
+      } else {
+        setSelectedBrands([...selectedBrands, value]);
+      }
+   }
+   else if (filterType === "feature") {
+    if (selectedFeatures.includes(value)) {
+      setSelectedFeatures(selectedFeatures.filter((feature) => feature !== value));
     } else {
-      // If the color is not selected, add it
-      setSelectedColors([...selectedColors, value]);
+      setSelectedFeatures([...selectedFeatures, value]);
     }
+  }
+  else if (filterType === "category") {
+    if (selectedCategory.includes(value)) {
+      setSelectedCategory(selectedCategory.filter((category) => category !== value));
+    } else {
+      setSelectedCategory([...selectedCategory, value]);
+    }
+  }
   };
 
+  // for Accordion
   const [colorVisible, setColorVisible] = useState(false);
   const [brandVisible, setBrandVisible] = useState(false);
   const [priceVisible, setPriceVisible] = useState(false);
@@ -127,11 +199,11 @@ const ProductGrid = () => {
   const togglePrice = () => {
     setPriceVisible(!priceVisible);
   };
-  
+
   const toggleFeature = () => {
     setFeatureVisible(!featureVisible);
   };
-  
+
   const toggleCategories = () => {
     setCategoriesVisible(!categoriesVisible);
   };
@@ -149,12 +221,20 @@ const ProductGrid = () => {
           Shopping Options
         </h3>
         <div className="space-y-2  mt-5 w-full pr-5 ">
-        {/**Brand Container */}
-        <div className="accordion">
+
+          {/**Brand Container */}
+          <div className="accordion">
             <div className="accordion-section">
-              <div
+             <div
+                role="button"
+                tabIndex={0}
                 className="accordion-header flex justify-between align-center mb-3 cursor-pointer"
                 onClick={toggleBrand}
+                onKeyPress={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    toggleBrand();
+                  }
+                }}
               >
                 <h2 className="font-semibold"> Brand </h2>
                 {brandVisible ? (
@@ -163,222 +243,176 @@ const ProductGrid = () => {
                   <FaChevronUp className="mt-1 hover:cursor-pointer" />
                 )}
               </div>
-              <div className={`accordion-content p-2 transition duration-300 ${brandVisible ? '' : 'hidden'}` }>
-                      
-              <label className="flex items-center text-left">
-                <input
-                  type="checkbox"
-                  value="Black"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Black")}
-                />
-                <span className="ml-2 text-gray-600 ">Black</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Khaki"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Khaki")}
-                />
-                <span className="ml-2 text-gray-600 ">Khaki</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Wheat"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Wheat")}
-                />
-                <span className="ml-2 text-gray-600 ">Wheat</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="White"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("White")}
-                />
-                <span className="ml-2 text-gray-600 ">White</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Stone"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Stone")}
-                />
-                <span className="ml-2 text-gray-600 ">Stone</span>
-              </label>
-
+              <div
+                className={`accordion-content p-2 transition duration-300 ${
+                  brandVisible ? "" : "hidden"
+                }`}
+              >
+                <label className="flex items-center text-left">
+                  <input
+                    type="checkbox"
+                    value="X"
+                    onChange={(event) => handleFilterChange(event, 'brand')}
+                   checked={selectedBrands.includes("X")}
+                  />
+                  <span className="ml-2 text-gray-600 ">X</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Y"
+                    onChange={(event) => handleFilterChange(event, 'brand')}
+                   checked={selectedBrands.includes("Y")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Y</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Z"
+                    onChange={(event) => handleFilterChange(event, 'brand')}
+                   checked={selectedBrands.includes("Z")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Z</span>
+                </label>
               </div>
-
             </div>
           </div>
 
           {/** Colour Container */}
           <div className="accordion">
             <div className="accordion-section">
-              <div
+            <div
+                role="button"
+                tabIndex={0}
                 className="accordion-header flex justify-between align-center mb-3 cursor-pointer"
                 onClick={toggleColor}
+                onKeyPress={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    toggleColor();
+                  }
+                }}
               >
-                <h2 className="font-semibold"> Colour </h2>
+                <h2 className="font-semibold"> Color </h2>
                 {colorVisible ? (
                   <FaChevronDown className="mt-1 hover:cursor-pointer" />
                 ) : (
                   <FaChevronUp className="mt-1 hover:cursor-pointer" />
                 )}
               </div>
-              <div className={`accordion-content p-2 transition duration-300 ${colorVisible ? '' : 'hidden'}` }>
-                      
-              <label className="flex items-center text-left">
-                <input
-                  type="checkbox"
-                  value="Black"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Black")}
-                />
-                <span className="ml-2 text-gray-600 ">Black</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Khaki"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Khaki")}
-                />
-                <span className="ml-2 text-gray-600 ">Khaki</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Wheat"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Wheat")}
-                />
-                <span className="ml-2 text-gray-600 ">Wheat</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="White"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("White")}
-                />
-                <span className="ml-2 text-gray-600 ">White</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Stone"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Stone")}
-                />
-                <span className="ml-2 text-gray-600 ">Stone</span>
-              </label>
 
+              <div
+                className={`accordion-content p-2 transition duration-300 ${
+                  colorVisible ? "" : "hidden"
+                }`}
+              >
+                <label className="flex items-center text-left">
+                  <input
+                    type="checkbox"
+                    value="Black"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Black")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Black</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Navy"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Navy")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Navy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Khaki"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Khaki")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Khaki</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Wheat"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Wheat")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Wheat</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Orange/Navy"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Orange/Navy")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Orange/Navy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Yellow/Navy"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Yellow/Navy")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="White"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("White")}
+                  />
+                  <span className="ml-2 text-gray-600 ">White</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Orange"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Orange")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Orange</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Yellow"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Yellow")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Yellow</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Stone"
+                    onChange={(event) => handleFilterChange(event, 'color')}
+                   checked={selectedColors.includes("Stone")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Stone</span>
+                </label>
               </div>
-
             </div>
           </div>
 
           {/** Price */}
           <div className="accordion">
             <div className="accordion-section">
-              <div
+            <div
+                role="button"
+                tabIndex={0}
                 className="accordion-header flex justify-between align-center mb-3 cursor-pointer"
                 onClick={togglePrice}
+                onKeyPress={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    togglePrice();
+                  }
+                }}
               >
                 <h2 className="font-semibold"> Price </h2>
                 {priceVisible ? (
@@ -387,222 +421,177 @@ const ProductGrid = () => {
                   <FaChevronUp className="mt-1 hover:cursor-pointer" />
                 )}
               </div>
-              <div className={`accordion-content p-2 transition duration-300 ${priceVisible ? '' : 'hidden'}` }>
-                      
-              <label className="flex items-center text-left">
-                <input
-                  type="checkbox"
-                  value="Black"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Black")}
-                />
-                <span className="ml-2 text-gray-600 ">Black</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Khaki"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Khaki")}
-                />
-                <span className="ml-2 text-gray-600 ">Khaki</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Wheat"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Wheat")}
-                />
-                <span className="ml-2 text-gray-600 ">Wheat</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="White"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("White")}
-                />
-                <span className="ml-2 text-gray-600 ">White</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Stone"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Stone")}
-                />
-                <span className="ml-2 text-gray-600 ">Stone</span>
-              </label>
 
+              <div
+                className={`accordion-content p-2 transition duration-300 ${
+                  priceVisible ? "" : "hidden"
+                }`}
+              >
+                <label className="flex items-center text-left">
+                  <input
+                    type="checkbox"
+                    value="Black"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Black")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Black</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Navy"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Navy")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Navy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Khaki"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Khaki")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Khaki</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Wheat"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Wheat")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Wheat</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Orange/Navy"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Orange/Navy")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Orange/Navy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Yellow/Navy"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Yellow/Navy")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="White"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("White")}
+                  />
+                  <span className="ml-2 text-gray-600 ">White</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Orange"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Orange")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Orange</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Yellow"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Yellow")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Yellow</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Stone"
+                    onChange={handleFilterChange}
+                    checked={selectedColors.includes("Stone")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Stone</span>
+                </label>
               </div>
-
             </div>
           </div>
 
           {/** Feature */}
           <div className="accordion">
             <div className="accordion-section">
-              <div
+            <div
+                role="button"
+                tabIndex={0}
                 className="accordion-header flex justify-between align-center mb-3 cursor-pointer"
                 onClick={toggleFeature}
+                onKeyPress={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    toggleFeature();
+                  }
+                }}
               >
-                <h2 className="font-semibold"> Feature </h2>
+                <h2 className="font-semibold"> Features </h2>
                 {featureVisible ? (
                   <FaChevronDown className="mt-1 hover:cursor-pointer" />
                 ) : (
                   <FaChevronUp className="mt-1 hover:cursor-pointer" />
                 )}
               </div>
-              <div className={`accordion-content p-2 transition duration-300 ${featureVisible ? '' : 'hidden'}` }>
-                      
-              <label className="flex items-center text-left">
-                <input
-                  type="checkbox"
-                  value="Black"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Black")}
-                />
-                <span className="ml-2 text-gray-600 ">Black</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Khaki"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Khaki")}
-                />
-                <span className="ml-2 text-gray-600 ">Khaki</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Wheat"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Wheat")}
-                />
-                <span className="ml-2 text-gray-600 ">Wheat</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="White"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("White")}
-                />
-                <span className="ml-2 text-gray-600 ">White</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Stone"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Stone")}
-                />
-                <span className="ml-2 text-gray-600 ">Stone</span>
-              </label>
 
+              <div
+                className={`accordion-content p-2 transition duration-300 ${
+                  featureVisible ? "" : "hidden"
+                }`}
+              >
+               <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Feature A"
+                    onChange={(event) => handleFilterChange(event, 'feature')}
+                    checked={selectedFeatures.includes("Feature A")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Feature A</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Feature B"
+                    onChange={(event) => handleFilterChange(event, 'feature')}
+                    checked={selectedFeatures.includes("Feature B")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Feature B</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Feature C"
+                    onChange={(event) => handleFilterChange(event, 'feature')}
+                    checked={selectedFeatures.includes("Feature C")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Feature C</span>
+                </label>
               </div>
-
             </div>
           </div>
 
-
+          {/** Categories */}
           <div className="accordion">
             <div className="accordion-section">
               <div
+                role="button"
+                tabIndex={0}
                 className="accordion-header flex justify-between align-center mb-3 cursor-pointer"
                 onClick={toggleCategories}
+                onKeyPress={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    toggleCategories();
+                  }
+                }}
               >
                 <h2 className="font-semibold"> Categories </h2>
                 {categoriesVisible ? (
@@ -611,101 +600,40 @@ const ProductGrid = () => {
                   <FaChevronUp className="mt-1 hover:cursor-pointer" />
                 )}
               </div>
-              <div className={`accordion-content p-2 transition duration-300 ${categoriesVisible ? '' : 'hidden'}` }>
-                      
-              <label className="flex items-center text-left">
-                <input
-                  type="checkbox"
-                  value="Black"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Black")}
-                />
-                <span className="ml-2 text-gray-600 ">Black</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Khaki"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Khaki")}
-                />
-                <span className="ml-2 text-gray-600 ">Khaki</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Wheat"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Wheat")}
-                />
-                <span className="ml-2 text-gray-600 ">Wheat</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow/Navy"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow/Navy")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="White"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("White")}
-                />
-                <span className="ml-2 text-gray-600 ">White</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Orange"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Orange")}
-                />
-                <span className="ml-2 text-gray-600 ">Orange</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Yellow"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Yellow")}
-                />
-                <span className="ml-2 text-gray-600 ">Yellow</span>
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  value="Stone"
-                  onChange={handleColorChange}
-                  checked={selectedColors.includes("Stone")}
-                />
-                <span className="ml-2 text-gray-600 ">Stone</span>
-              </label>
 
+              <div
+                className={`accordion-content p-2 transition duration-300 ${
+                  categoriesVisible ? "" : "hidden"
+                }`}
+              >
+                <label className="flex items-center text-left">
+                  <input
+                    type="checkbox"
+                    value="Category A"
+                    onChange={(event) => handleFilterChange(event, 'category')}
+                   checked={selectedCategory.includes("Category A")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Category A</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Category B"
+                    onChange={(event) => handleFilterChange(event, 'category')}
+                   checked={selectedCategory.includes("Category B")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Category B</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    value="Category C"
+                    onChange={(event) => handleFilterChange(event, 'category')}
+                   checked={selectedCategory.includes("Category C")}
+                  />
+                  <span className="ml-2 text-gray-600 ">Category C</span>
+                </label>
               </div>
-
             </div>
           </div>
           {/* Add more checkbox options for colors as needed */}
