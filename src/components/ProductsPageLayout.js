@@ -11,7 +11,7 @@ import NavTrail from "./NavTrail/NavTrail";
 import ProductPagination from "./ProductPage/ProductPagination.js";
 import DropdownMenu from "./NavBar/DropdownMenu.js";
 
-const Layout = ({ pageTitle, children }) => {
+const ProductsPageLayout = ({ pageTitle, children }) => {
   return (
     <div>
       <Navbar> </Navbar>
@@ -32,4 +32,4 @@ const Layout = ({ pageTitle, children }) => {
   );
 };
 
-export default Layout;
+export default ProductsPageLayout;

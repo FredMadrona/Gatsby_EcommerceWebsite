@@ -2,7 +2,7 @@
 import React from "react";
 import Logo from "./NavBarImages/Hardware_Logo.svg";
 import { BsCart2, BsPerson, BsSearch } from "react-icons/bs";
-
+import { Link } from "gatsby";
 import MenuButton from "../NavBar/MenuButton";
 
 const Navbar = () => {
@@ -10,12 +10,14 @@ const Navbar = () => {
     <nav className="sticky top-0 w-full z-50 bg-white p-1 grid grid-cols-12 justify-between items-center gap-4 h-20 lg:px-1/4">
             
       {/* Column 1: Logo */}
-      <div className="flex items-center justify-start col-span-4  ">
+      <div className="flex items-center justify-center col-span-4  ">
+      <Link to="/" className=" hover:cursor-pointer ">
         <img
           src={Logo}
           alt="Logo"
-          className="h-16 w-full hover:cursor-pointer "
+          className="h-16 w-full"
         />
+        </Link>
       </div>
 
       <div className="flex items center md:col-span-4 col-span-6">

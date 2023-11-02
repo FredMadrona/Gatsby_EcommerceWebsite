@@ -1,13 +1,11 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-
+import IndexPageLayout from '../components/IndexPageLayout'
 const IndexPage = () => {
   return (
-    <Layout  >  
-    </Layout>
+    <IndexPageLayout></IndexPageLayout>
   )
 }
 
-export const Head = () => <title>All Products</title>
+export const Head = () => <title> Home </title>
 
 export default IndexPage
