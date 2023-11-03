@@ -5,11 +5,11 @@ import { BsHeart, BsCart2 } from "react-icons/bs";
 const ProductCards = () => {
   return (
     <div>
-      <div className="grid grid-cols-12 bg-gray-100 pt-5">
+      <div className="grid grid-cols-12 bg-gray-100 pt-5 ">
         <div className="col-span-2"></div>
         <div className="col-span-8">
           {" "}
-          <h1 className="text-3xl border ml-5 text-primary align-center font-bold">
+          <h1 className="text-3xl ml-5 text-primary align-center font-bold">
             {" "}
             Popular Products{" "}
           </h1>{" "}
@@ -17,7 +17,7 @@ const ProductCards = () => {
       </div>
       <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5">
         <div className="col-span-2"></div>
-        <div className="col-span-8 grid grid-cols-4 justify-evenly gap-5">
+        <div className="col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
           <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:border-primary">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
@@ -101,7 +101,7 @@ const ProductCards = () => {
         <div className="col-span-2"></div>
         <div className="col-span-8">
           {" "}
-          <h1 className="text-3xl border ml-5 text-primary align-center font-bold">
+          <h1 className="text-3xl ml-5 text-primary align-center font-bold">
             {" "}
             New Arrival{" "}
           </h1>{" "}
@@ -109,7 +109,7 @@ const ProductCards = () => {
       </div>
       <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5">
         <div className="col-span-2"></div>
-        <div className="col-span-8 grid grid-cols-4 justify-evenly gap-5">
+        <div className="col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
           <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:border-primary">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
@@ -186,6 +186,26 @@ const ProductCards = () => {
               {/* Cart Icon */}
             </button>
           </div>
+        </div>
+        <div className="col-span-2"></div>
+      </div>
+
+
+
+      <div className="grid grid-cols-12 bg-white p-5 ">
+        <div className="col-span-2"></div>
+        <div className="col-span-8 grid md:grid-cols-3 grid-cols-1 gap-5">
+           <div className="col-span-1">
+           <StaticImage src="./IndexPageImages/IndexPageImage01.png" className="w-full h-full cursor-pointer hover:shadow-md rounded"/>
+            </div>
+
+           <div className="col-span-1">
+           <StaticImage src="./IndexPageImages/IndexPageImage02.png" className="w-full h-full cursor-pointer hover:shadow-md rounded"/>
+             </div>
+
+           <div className="col-span-1 bg-red text-white"> 
+           <StaticImage src="./IndexPageImages/IndexPageImage03.png" className="w-full h-full cursor-pointer hover:shadow-md rounded"/>
+           </div>
         </div>
         <div className="col-span-2"></div>
       </div>
