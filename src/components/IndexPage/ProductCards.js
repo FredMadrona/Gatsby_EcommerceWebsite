@@ -1,17 +1,28 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { BsHeart, BsCart2 } from "react-icons/bs";
+import { Link } from "gatsby";
+
 
 const ProductCards = () => {
   return (
     <div>
+      <div className="bg-white grid md:grid-cols-2 grid-cols-1">
+        <div className="col-span-1 m-5">
+        <StaticImage src="./IndexPageImages/DoorControl.png" className="rounded cursor-pointer hover:shadow-md "></StaticImage>
+        </div>
+        <div className="col-span-1 m-5">
+        <StaticImage src="./IndexPageImages/IntelligentDoorLock.png" className="rounded cursor-pointer hover:shadow-md "></StaticImage>
+        </div>
+      </div>
+
       <div className="grid grid-cols-12 bg-gray-100 pt-5 ">
         <div className="col-span-2"></div>
         <div className="col-span-8">
           {" "}
           <h1 className="text-3xl ml-5 text-primary align-center font-bold">
             {" "}
-            Popular Products{" "}
+           <Link to="ProductsPage">Popular Products</Link> 
           </h1>{" "}
         </div>
       </div>

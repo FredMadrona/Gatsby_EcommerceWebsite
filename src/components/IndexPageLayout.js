@@ -7,7 +7,6 @@ import PaymentFooter from "./Footer/PaymentFooter.js";
 import DropdownMenu from "./NavBar/DropdownMenu.js";
 import ImageSlider from "../components/IndexPage/ImageSlider.js";
 import ProductCards from "./IndexPage/ProductCards.js";
-import { Link } from "gatsby";
 
 const IndexPageLayout = ({ pageTitle, children }) => {
     return (
@@ -24,7 +23,7 @@ const IndexPageLayout = ({ pageTitle, children }) => {
      
       {/* More content */}
     </div>
-    <Link to="ProductsPage"> To the ProductsPage</Link>
+   
     <ProductCards></ProductCards>
         </main>
          
