@@ -21,11 +21,13 @@ const IndexPageLayout = ({ pageTitle, children }) => {
         <div className="flex justify-center align-center">
       {/* Other content on your page */}
       <ImageSlider />
-      <Link to="ProductsPage"> To the ProductsPage</Link>
+     
       {/* More content */}
     </div>
+    <Link to="ProductsPage"> To the ProductsPage</Link>
     <ProductCards></ProductCards>
         </main>
+         
         <FooterMenu> </FooterMenu>
         <PaymentFooter> </PaymentFooter>
       </div>
