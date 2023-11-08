@@ -3,16 +3,21 @@ import { StaticImage } from "gatsby-plugin-image";
 import { BsHeart, BsCart2 } from "react-icons/bs";
 import { Link } from "gatsby";
 
-
 const ProductCards = () => {
   return (
     <div>
       <div className="bg-white grid md:grid-cols-2 grid-cols-1">
         <div className="col-span-1 m-5">
-        <StaticImage src="./IndexPageImages/DoorControl.png" className="rounded cursor-pointer hover:shadow-md "></StaticImage>
+          <StaticImage
+            src="./IndexPageImages/DoorControl.png"
+            className="rounded cursor-pointer hover:shadow-md "
+          ></StaticImage>
         </div>
         <div className="col-span-1 m-5">
-        <StaticImage src="./IndexPageImages/IntelligentDoorLock.png" className="rounded cursor-pointer hover:shadow-md "></StaticImage>
+          <StaticImage
+            src="./IndexPageImages/IntelligentDoorLock.png"
+            className="rounded cursor-pointer hover:shadow-md "
+          ></StaticImage>
         </div>
       </div>
 
@@ -22,7 +27,7 @@ const ProductCards = () => {
           {" "}
           <h1 className="text-3xl ml-5 text-primary align-center font-bold">
             {" "}
-           <Link to="ProductsPage">Popular Products</Link> 
+            <Link to="ProductsPage">Popular Products</Link>
           </h1>{" "}
         </div>
       </div>
@@ -201,22 +206,29 @@ const ProductCards = () => {
         <div className="col-span-2"></div>
       </div>
 
-
-
       <div className="grid grid-cols-12 bg-white p-5 ">
         <div className="col-span-2"></div>
         <div className="col-span-8 grid md:grid-cols-3 grid-cols-1 gap-5">
-           <div className="col-span-1">
-           <StaticImage src="./IndexPageImages/IndexPageImage01.png" className="w-full h-full cursor-pointer hover:shadow-md rounded"/>
-            </div>
+          <div className="col-span-1">
+            <StaticImage
+              src="./IndexPageImages/IndexPageImage01.png"
+              className="w-full h-full cursor-pointer hover:shadow-md rounded"
+            />
+          </div>
 
-           <div className="col-span-1">
-           <StaticImage src="./IndexPageImages/IndexPageImage02.png" className="w-full h-full cursor-pointer hover:shadow-md rounded"/>
-             </div>
+          <div className="col-span-1">
+            <StaticImage
+              src="./IndexPageImages/IndexPageImage02.png"
+              className="w-full h-full cursor-pointer hover:shadow-md rounded"
+            />
+          </div>
 
-           <div className="col-span-1 bg-red text-white"> 
-           <StaticImage src="./IndexPageImages/IndexPageImage03.png" className="w-full h-full cursor-pointer hover:shadow-md rounded"/>
-           </div>
+          <div className="col-span-1 bg-red text-white">
+            <StaticImage
+              src="./IndexPageImages/IndexPageImage03.png"
+              className="w-full h-full cursor-pointer hover:shadow-md rounded"
+            />
+          </div>
         </div>
         <div className="col-span-2"></div>
       </div>

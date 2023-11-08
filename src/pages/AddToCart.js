@@ -1,13 +1,12 @@
-import React from "react";
+import * as React from 'react'
+import AddToCartLayout from '../components/AddToCartLayout'
 
 const AddToCart = () => {
-  return(
-    <div>
-        
-    </div>
-  ); 
-};
+  return (
+        <AddToCartLayout></AddToCartLayout>
+  )
+}
 
-export const Head = () => <title> Add to Cart </title>;
+export const Head = () => <title> Add to Cart </title>
 
-export default AddToCart;
+export default AddToCart
