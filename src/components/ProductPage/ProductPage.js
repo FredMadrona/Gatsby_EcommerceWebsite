@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { BsCart2, BsHeart } from "react-icons/bs";
+
+
 
 const ProductGrid = () => {
   const data = useStaticQuery(graphql`
@@ -727,10 +729,11 @@ const ProductGrid = () => {
                   </p>{" "}
                   {/* Heart Icon */}
                 </div>
+                <Link to="../about">
                 <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
                   Add to cart <BsCart2 className="mx-2" />
                   {/* Cart Icon */}
-                </button>
+                </button></Link>
               </div>
             ))}
           </div>

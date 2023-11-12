@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
+import { Link } from "gatsby";
 
 const ProductOptions = () => {
-  const options = ["Option 1", "Option 2", "Option 3"];
+  const options = ["Small", "Medium", "Large"];
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,6 +15,18 @@ const ProductOptions = () => {
   const selectOption = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
+  };
+
+  const [quantity, setQuantity] = useState(1);
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
   };
 
   return (
@@ -114,13 +127,18 @@ const ProductOptions = () => {
                 {options.map((option) => (
                   <li
                     key={option}
-                    onClick={() => selectOption(option)}
                     className={
-                      ("p-2 cursor-pointer hover:bg-gray-200",
+                      ("p-2 cursor-pointer hover:bg-gray-200 text-end",
                       option === selectedOption && "bg-gray-200")
                     }
                   >
-                    {option}
+                    <button
+                      type="button"
+                      onClick={() => selectOption(option)}
+                      className="w-full h-full"
+                    >
+                      {option}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -132,31 +150,51 @@ const ProductOptions = () => {
               <button
                 className="rounded-full cursor-pointer p-5 border border-gray-400"
                 style={{ backgroundColor: "#ffcc99" }}
+                aria-label="Color: Light Orange"
               ></button>
               <button
                 className="rounded-full cursor-pointer p-5 border border-gray-400"
                 style={{ backgroundColor: "#333333" }}
+                aria-label="Color: Dark Gray"
               ></button>
               <button
                 className="rounded-full cursor-pointer p-5 border border-gray-400"
                 style={{ backgroundColor: "#666633" }}
+                aria-label="Color: Olive Green"
               ></button>
             </div>
           </div>
           <div className="mt-5 w-3/4  ">
-          <p className="font-semibold text-md mb-3"> Quantity: </p>
-              <div className="grid grid-cols-2">
+            <p className="font-semibold text-md mb-3"> Quantity: </p>
+            <div className="grid grid-cols-2">
               <div className="cols-span-1 rounded flex flex-row">
-              <button className="text-lg px-[33px] text-gray-500 border border-gray-500 flex items-center justify-center"> - </button>
+                <button
+                  className="text-lg px-[33px] text-gray-500 border border-gray-500 flex items-center justify-center"
+                  onClick={decreaseQuantity}
+                >
+                  {" "}
+                  -{" "}
+                </button>
 
-                <span className="text-lg  border border-gray-500 px-[33px] text-lg flex items-center"> 1 </span>
-                <button className="text-lg px-[33px]   border border-gray-500 px-5 text-lg flex items-center"> + </button>
-              </div> 
-                <div className="cols-span-1 ">
-                    <button className="bg-black text-white font-semibold text-lg text-center p-2 w-full"> Add to Cart</button>
-
-                  </div>    
+                <span className="text-lg  border border-gray-500 px-[33px] text-lg flex items-center">
+                  {" "}
+                  {quantity}
+                </span>
+                <button
+                  className="text-lg px-[33px]   border border-gray-500 px-5 text-lg flex items-center"
+                  onClick={increaseQuantity}
+                >
+                  {" "}
+                  +{" "}
+                </button>
               </div>
+              <div className="cols-span-1 ">
+               <Link to="../Cart"> <button className="bg-black text-white font-semibold text-lg text-center p-2 w-full">
+                  {" "}
+                  Add to Cart
+                </button> </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
