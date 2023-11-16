@@ -6,6 +6,7 @@ import PaymentFooter from "./Footer/PaymentFooter.js";
 import DropdownMenu from "./NavBar/DropdownMenu.js";
 import CartNavTrail from "./Cart/CartNavTrail.js";
 import CartContent from "./Cart/CartContent.js";
+import ShippingDetails from "./Cart/ShippingDetails.js";
 
 const CartLayout = ()  =>{
 
@@ -16,6 +17,7 @@ const CartLayout = ()  =>{
         <DropdownMenu> </DropdownMenu>
         <CartNavTrail></CartNavTrail>
         <CartContent></CartContent>
+        <ShippingDetails></ShippingDetails>
         <FooterMenu></FooterMenu>    
         <PaymentFooter></PaymentFooter>
 
