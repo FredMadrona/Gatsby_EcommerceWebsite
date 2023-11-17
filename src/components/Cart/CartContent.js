@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { BsTrash3 } from "react-icons/bs";
+import { Link } from "gatsby";
 
 const CartContent = () => {
   return (
@@ -146,11 +147,11 @@ const CartContent = () => {
                 <p className="text-gray-300 text-center"> or </p>
               </div>
               <div className="w-full flex justify-center mt-1">
-                <button className="w-full bg-red-600 py-3 rounded m-1 border text-white text-sm hover:shadow-md hover:bg-red-700">
+               <Link to="../Checkout" className="w-full"> <button className="w-full bg-red-600 py-3 rounded m-1 border text-white text-sm hover:shadow-md hover:bg-red-700">
                   <p className="font-semibold hover:underline ">
                     PROCEED TO CHECKOUT
                   </p>
-                </button>
+                </button></Link>
               </div>
             </div>
             <div className="w-full flex flex-row justify-center gap-1 mt-5">
