@@ -59,8 +59,43 @@ const ShippingDetails = () => {
                   className="border w-[45%] px-3 py-1 mt-1"
                 ></input>
               </div>
-              <button className="w-[30%]  bg-black text-white font-semibold hover:shadow-sm p-2 ">
+              <button className="w-[30%]  bg-black text-white font-semibold hover:shadow-sm p-2 my-5">
                 Update Shipping Options
+              </button>
+              <div className="pt-5 flex flex-row gap-[100px]">
+                <div className="flex align-start flex-col">
+                  <p className="text-gray-400  text-sm">Regular Post - FREE</p>
+                  <div>
+                    <input
+                      type="radio"
+                      id="regularPost"
+                      name="shipping"
+                      value="regular"
+                      className="mr-2 cursor-pointer"
+                    />
+                    <label htmlFor="regularPost" className="font-semibold">
+                      P0.00
+                    </label>
+                  </div>
+                </div>
+                <div className="flex align-start flex-col">
+                  <p className="text-gray-400  text-sm">Express Post</p>
+                  <div>
+                    <input
+                      type="radio"
+                      id="regularPost"
+                      name="shipping"
+                      value="regular"
+                      className="mr-2 cursor-pointer"
+                    />
+                    <label htmlFor="regularPost" className="font-semibold">
+                      P0.00
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button className="w-[30%]  bg-black text-white font-semibold hover:shadow-sm p-2 my-5">
+               Select Shipping
               </button>
             </div>
           </div>
