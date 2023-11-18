@@ -114,7 +114,7 @@ const CartContent = () => {
               </tbody>
             </table>
           </div>
-          <div className=" h-auto w-[20%] mx-5">
+          <div className=" h-auto w-[30%] mx-5">
             <div className="bg-white rounded py-3">
               <h3 className="font-bold text-xl mt-1 m-5"> Total </h3>
               <div className="flex justify-between align-center w-[250px]">
@@ -147,7 +147,7 @@ const CartContent = () => {
                 <p className="text-gray-300 text-center"> or </p>
               </div>
               <div className="w-full flex justify-center mt-1">
-               <Link to="../Checkout" className="w-full"> <button className="w-full bg-red-600 py-3 rounded m-1 border text-white text-sm hover:shadow-md hover:bg-red-700">
+               <Link to="../Checkout" className="w-full"> <button className="w-full bg-red-600 py-3 rounded  border text-white text-sm hover:shadow-md hover:bg-red-700">
                   <p className="font-semibold hover:underline ">
                     PROCEED TO CHECKOUT
                   </p>
