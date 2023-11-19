@@ -1,9 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { BsTrash3 } from "react-icons/bs";
 import { Link } from "gatsby";
 
 const CartContent = () => {
+
+  
+  const [quantity, setQuantity] = useState(1);
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+
   return (
     <div>
       <div className="grid grid-cols-12 bg-gray-100">
@@ -40,11 +55,11 @@ const CartContent = () => {
                     </p>
                   </td>
                   <td className="py-3 px-5  mt-[40px] mx-5 flex flex-row justify-evenly   border border-gray-100">
-                    <button className="text-gray-500 px-2 text-md text-center">
+                    <button className="text-gray-500 px-2 text-md text-center" onClick={decreaseQuantity}>
                       -
                     </button>
-                    <span className="mx-2 px-2 text-center"> 1 </span>
-                    <button className=" text-gray-500 px-2 text-md text-center">
+                    <span className="mx-2 px-2 text-center"> {quantity} </span>
+                    <button className=" text-gray-500 px-2 text-md text-center" onClick={increaseQuantity}>
                       +
                     </button>
                   </td>
@@ -117,26 +132,26 @@ const CartContent = () => {
           <div className=" h-auto w-[30%] mx-5">
             <div className="bg-white rounded py-3">
               <h3 className="font-bold text-xl mt-1 m-5"> Total </h3>
-              <div className="flex justify-between align-center w-[250px]">
-                <span className="text-gray-400 mx-5 mt-1 text-md font-semibold">
+              <div className="flex justify-between align-center w-[250px] border-b pb-2">
+                <span className="text-gray-400 mx-5 mt-1 text-md hover:text-gray-600 cursor-pointer ">
                   {" "}
                   Subtotal{" "}
                 </span>
-                <span className="text-black text-md mx-5 mt-1 font-bold"> 0.00 </span>
+                <span className="text-black text-md mx-5 mt-1 font-bold cursor-pointer"> 0.00 </span>
               </div>
-              <div className="flex justify-between align-center w-[250px]">
-                <span className="text-gray-400 mx-5 mt-1 text-md font-semibold"> VAT </span>
-                <span className="text-black text-md mx-5 mt-1 font-bold"> 0 </span>
+              <div className="flex justify-between align-center w-[250px] border-b pb-2">
+                <span className="text-gray-400 mx-5 mt-1 text-md hover:text-gray-600 cursor-pointer "> VAT </span>
+                <span className="text-black text-md mx-5 mt-1 font-bold cursor-pointer"> 0 </span>
               </div>
-              <div className="flex justify-between align-center w-[250px]">
-                <span className="text-gray-400 mx-5 mt-1 text-md font-semibold">
+              <div className="flex justify-between align-center w-[250px] border-b pb-2">
+                <span className="text-gray-400 mx-5 mt-1 text-md hover:text-gray-600 cursor-pointer ">
                   {" "}
                   Grand Total{" "}
                 </span>
-                <span className="text-black text-md mx-5 mt-1 font-bold"> 0.00 </span>
+                <span className="text-black text-md mx-5 mt-1 font-bold cursor-pointer"> 0.00 </span>
               </div>
               <div className=" w-full flex justify-center mt-5">
-                <button className="bg-yellow-300 hover:bg-yellow-400 h-1/4 hover:shadow-md rounded m-1 flex items-center justify-center">
+                <button className="bg-yellow-300 hover:bg-yellow-400 h-1/4 hover:shadow-md rounded  mt-1 flex items-center justify-center border w-full">
                   <StaticImage
                     className="h-1/4  w-1/4 m-3"
                     src="./paypalpng.png"

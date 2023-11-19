@@ -31,11 +31,16 @@ const Navbar = () => {
         </div>
       </div>
       <div className="md:flex flex-no-wrap hidden items-start justify-center gap-4 w-full md:col-span-4 col-span-2  ">
-        <div className="flex items-center  gap-2 lg:mr-5">
-          <BsPerson className="h-6 w-6 text-primary " />
-          <button className="text-primary text-md font-semibold ">
-            Login / Sign up
+        <div className="flex flex-row items-center  gap-1 lg:mr-5">
+          <BsPerson className="h-6 w-6 text-primary cursor-pointer " />
+          <button className="text-primary text-xs font-semibold hover:underline ">
+            Login 
           </button>
+          <span className="text-primary"> | </span>
+          <button className="text-primary text-xs font-semibold hover:underline">
+            Sign up 
+          </button>
+          
         </div>
 
         <div className="relative flex flex-row  items-center ">
@@ -49,11 +54,11 @@ const Navbar = () => {
           >
             <BsCart2 />
           </svg>
-          <span className="absolute top-0 right-0 -mt-3 -mr-1 bg-red-500 text-white w-5 h-5 flex items-center justify-center rounded-full text-xs">
+          <span className="absolute top-0 right-0 -mt-3 -mr-1 bg-red-500 text-white w-5 h-5 flex items-center justify-center rounded-full text-sm">
             0
           </span>
         </div>
-        <p className="text-blue-primary">0.00</p>
+        <p className="text-primary text-sm ">0.00</p>
 
         {/* Conditionally render the MenuButton component on medium screens */}
       </div>

@@ -112,7 +112,7 @@ const ProductOptions = () => {
               }}
               role="button"
               tabIndex={0}
-              className="border border-gray-400 p-2 flex items-between justify-between w-1/2 mt-5 cursor-pointer "
+              className="border border-gray-400 p-1  px-2 flex items-between justify-between w-1/2 mt-5 cursor-pointer "
             >
               {selectedOption ? selectedOption : "Select Size"}
               {isOpen ? (
@@ -166,22 +166,22 @@ const ProductOptions = () => {
           </div>
           <div className="mt-5 w-3/4  ">
             <p className="font-semibold text-md mb-3"> Quantity: </p>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-1 justify-start">
               <div className="cols-span-1 rounded flex flex-row">
                 <button
-                  className="text-lg px-[33px] text-gray-500 border border-gray-500 flex items-center justify-center"
+                  className="text-md px-[20px] text-gray-500 border border-gray-500 flex items-center justify-center"
                   onClick={decreaseQuantity}
                 >
                   {" "}
                   -{" "}
                 </button>
 
-                <span className="text-lg  border border-gray-500 px-[33px] text-lg flex items-center">
+                <span className="text-md  border border-gray-500 px-[20px] text-lg flex items-center">
                   {" "}
                   {quantity}
                 </span>
                 <button
-                  className="text-lg px-[33px]   border border-gray-500 px-5 text-lg flex items-center"
+                  className="text-md px-[20px]   border border-gray-500  text-lg flex items-center"
                   onClick={increaseQuantity}
                 >
                   {" "}
@@ -189,7 +189,7 @@ const ProductOptions = () => {
                 </button>
               </div>
               <div className="cols-span-1 ">
-               <Link to="../Cart"> <button className="bg-black text-white font-semibold text-lg text-center p-2 w-full">
+               <Link to="../Cart"> <button className="bg-black text-white font-semibold text-sm text-center p-2 w-full">
                   {" "}
                   Add to Cart
                 </button> </Link>
