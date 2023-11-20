@@ -60,7 +60,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "A",
       category: "B",
-      img: data.allFile.nodes[1].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 5,
@@ -80,7 +80,7 @@ const ProductGrid = () => {
       brand: "Z",
       feature: "C",
       category: "A",
-      img: data.allFile.nodes[2].childImageSharp.fluid,
+      img: data.allFile.nodes[1].childImageSharp.fluid,
     },
     {
       id: 7,
@@ -90,7 +90,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "A",
       category: "C",
-      img: data.allFile.nodes[0].childImageSharp.fluid,
+      img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
       id: 8,
@@ -100,7 +100,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "B",
       category: "B",
-      img: data.allFile.nodes[1].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 9,
@@ -110,7 +110,7 @@ const ProductGrid = () => {
       brand: "Z",
       feature: "C",
       category: "A",
-      img: data.allFile.nodes[2].childImageSharp.fluid,
+      img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
       id: 10,
@@ -120,7 +120,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "A",
       category: "A",
-      img: data.allFile.nodes[0].childImageSharp.fluid,
+      img: data.allFile.nodes[1].childImageSharp.fluid,
     },
     {
       id: 11,
@@ -130,7 +130,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "B",
       category: "B",
-      img: data.allFile.nodes[1].childImageSharp.fluid,
+      img: data.allFile.nodes[2].childImageSharp.fluid,
     },
     {
       id: 12,
@@ -150,7 +150,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "A",
       category: "A",
-      img: data.allFile.nodes[0].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 14,
@@ -160,7 +160,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "B",
       category: "B",
-      img: data.allFile.nodes[1].childImageSharp.fluid,
+      img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
       id: 15,
@@ -170,7 +170,7 @@ const ProductGrid = () => {
       brand: "Z",
       feature: "C",
       category: "C",
-      img: data.allFile.nodes[2].childImageSharp.fluid,
+      img: data.allFile.nodes[1].childImageSharp.fluid,
     },
   ];
 
@@ -616,7 +616,7 @@ const ProductGrid = () => {
                       type="checkbox"
                       value="Feature A"
                       onChange={(event) => handleFilterChange(event, "feature")}
-                      checked={selectedFeatures.includes("Feature A")}
+                      checked={selectedFeatures.includes("A")}
                     />
                     <span className="ml-2 text-gray-600 ">Feature A</span>
                   </label>
@@ -625,7 +625,7 @@ const ProductGrid = () => {
                       type="checkbox"
                       value="Feature B"
                       onChange={(event) => handleFilterChange(event, "feature")}
-                      checked={selectedFeatures.includes("Feature B")}
+                      checked={selectedFeatures.includes("B")}
                     />
                     <span className="ml-2 text-gray-600 ">Feature B</span>
                   </label>
@@ -634,7 +634,7 @@ const ProductGrid = () => {
                       type="checkbox"
                       value="Feature C"
                       onChange={(event) => handleFilterChange(event, "feature")}
-                      checked={selectedFeatures.includes("Feature C")}
+                      checked={selectedFeatures.includes("C")}
                     />
                     <span className="ml-2 text-gray-600 ">Feature C</span>
                   </label>
@@ -676,7 +676,7 @@ const ProductGrid = () => {
                       onChange={(event) =>
                         handleFilterChange(event, "category")
                       }
-                      checked={selectedCategory.includes("Category A")}
+                      checked={selectedCategory.includes("A")}
                     />
                     <span className="ml-2 text-gray-600 ">Category A</span>
                   </label>
@@ -687,7 +687,7 @@ const ProductGrid = () => {
                       onChange={(event) =>
                         handleFilterChange(event, "category")
                       }
-                      checked={selectedCategory.includes("Category B")}
+                      checked={selectedCategory.includes("B")}
                     />
                     <span className="ml-2 text-gray-600 ">Category B</span>
                   </label>
@@ -698,7 +698,7 @@ const ProductGrid = () => {
                       onChange={(event) =>
                         handleFilterChange(event, "category")
                       }
-                      checked={selectedCategory.includes("Category C")}
+                      checked={selectedCategory.includes("C")}
                     />
                     <span className="ml-2 text-gray-600 ">Category C</span>
                   </label>

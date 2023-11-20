@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "gatsby";
+
 
 const NavTrail = () => {
   return (
@@ -9,9 +11,9 @@ const NavTrail = () => {
       {/* Links to other pages */}
       <div>
         <ol className='list-none flex space-x-2'>
-          <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Home /</li>
+        <Link to="/"> <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Home /</li> </Link> 
           <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Category / </li>
-          <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>All Products</li>
+         <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>All Products</li>
         </ol>
       </div> 
         </div>

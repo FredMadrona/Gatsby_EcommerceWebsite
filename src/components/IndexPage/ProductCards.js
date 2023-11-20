@@ -25,9 +25,9 @@ const ProductCards = () => {
         <div className="col-span-2"></div>
         <div className="col-span-8">
           {" "}
-          <h1 className="text-3xl ml-5 text-primary align-center font-bold">
+          <h1 className="text-3xl ml-5 text-primary align-center font-bold ">
             {" "}
-            <Link to="ProductsPage">Popular Products</Link>
+            <Link to="ProductsPage" className="hover:underline">Popular Products</Link>
           </h1>{" "}
         </div>
       </div>
@@ -117,7 +117,7 @@ const ProductCards = () => {
         <div className="col-span-2"></div>
         <div className="col-span-8">
           {" "}
-          <h1 className="text-3xl ml-5 text-primary align-center font-bold">
+          <h1 className="text-3xl ml-5 text-primary align-center font-bold hover:underline cursor-pointer">
             {" "}
             New Arrival{" "}
           </h1>{" "}

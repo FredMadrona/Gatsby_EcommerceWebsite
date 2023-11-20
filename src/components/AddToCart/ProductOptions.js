@@ -32,13 +32,13 @@ const ProductOptions = () => {
   return (
     <div className="mt-[25px]">
       <div className=" ml-[150px]">
-        <span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
+        <Link to="/"> <span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
           Home /
-        </span>
-        <span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
+        </span></Link>
+        <Link to="../ProductsPage"><span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
           {" "}
-          Cateogry /
-        </span>
+          Category /
+        </span></Link>
         <span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
           {" "}
           Shop /
