@@ -28,8 +28,8 @@ const ProductGrid = () => {
       color: "Black",
       price: "Php 1,000.00",
       brand: "X",
-      feature: "A",
-      category: "A",
+      feature: "X",
+      category: "Q",
       img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
@@ -38,7 +38,7 @@ const ProductGrid = () => {
       color: "Navy",
       price: "Php 500.00",
       brand: "Y",
-      feature: "B",
+      feature: "W",
       category: "B",
       img: data.allFile.nodes[1].childImageSharp.fluid,
     },
@@ -48,7 +48,7 @@ const ProductGrid = () => {
       color: "Khaki",
       price: "Php 800.00",
       brand: "Z",
-      feature: "C",
+      feature: "E",
       category: "C",
       img: data.allFile.nodes[2].childImageSharp.fluid,
     },
@@ -58,9 +58,9 @@ const ProductGrid = () => {
       color: "Wheat",
       price: "Php 500.00",
       brand: "Y",
-      feature: "A",
+      feature: "Q",
       category: "B",
-      img: data.allFile.nodes[3].childImageSharp.fluid,
+      img: data.allFile.nodes[4].childImageSharp.fluid,
     },
     {
       id: 5,
@@ -68,7 +68,7 @@ const ProductGrid = () => {
       color: "Orange/Navy",
       price: "Php 500.00",
       brand: "X",
-      feature: "B",
+      feature: "W",
       category: "C",
       img: data.allFile.nodes[0].childImageSharp.fluid,
     },
@@ -78,7 +78,7 @@ const ProductGrid = () => {
       color: "Yellow",
       price: "Php 1,000.00",
       brand: "Z",
-      feature: "C",
+      feature: "E",
       category: "A",
       img: data.allFile.nodes[1].childImageSharp.fluid,
     },
@@ -88,7 +88,7 @@ const ProductGrid = () => {
       color: "Stone",
       price: "Php 500.00",
       brand: "X",
-      feature: "A",
+      feature: "Q",
       category: "C",
       img: data.allFile.nodes[2].childImageSharp.fluid,
     },
@@ -98,9 +98,9 @@ const ProductGrid = () => {
       color: "Black",
       price: "Php 800.00",
       brand: "Y",
-      feature: "B",
+      feature: "W",
       category: "B",
-      img: data.allFile.nodes[3].childImageSharp.fluid,
+      img: data.allFile.nodes[4].childImageSharp.fluid,
     },
     {
       id: 9,
@@ -108,7 +108,7 @@ const ProductGrid = () => {
       color: "Navy",
       price: "Php 500.00",
       brand: "Z",
-      feature: "C",
+      feature: "E",
       category: "A",
       img: data.allFile.nodes[0].childImageSharp.fluid,
     },
@@ -118,7 +118,7 @@ const ProductGrid = () => {
       color: "Black",
       price: "Php 200.00",
       brand: "X",
-      feature: "A",
+      feature: "Q",
       category: "A",
       img: data.allFile.nodes[1].childImageSharp.fluid,
     },
@@ -128,7 +128,7 @@ const ProductGrid = () => {
       color: "Navy",
       price: "Php 300.00",
       brand: "Y",
-      feature: "B",
+      feature: "W",
       category: "B",
       img: data.allFile.nodes[2].childImageSharp.fluid,
     },
@@ -138,9 +138,9 @@ const ProductGrid = () => {
       color: "Yellow",
       price: "Php 400.00",
       brand: "Z",
-      feature: "C",
-      category: "C",
-      img: data.allFile.nodes[2].childImageSharp.fluid,
+      feature: "Z",
+      category: "E",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
     },
     {
       id: 13,
@@ -148,9 +148,9 @@ const ProductGrid = () => {
       color: "Color 13",
       price: "Php 500.00",
       brand: "X",
-      feature: "A",
+      feature: "Q",
       category: "A",
-      img: data.allFile.nodes[3].childImageSharp.fluid,
+      img: data.allFile.nodes[0].childImageSharp.fluid,
     },
     {
       id: 14,
@@ -158,9 +158,9 @@ const ProductGrid = () => {
       color: "Stone",
       price: "Php 600.00",
       brand: "Y",
-      feature: "B",
+      feature: "W",
       category: "B",
-      img: data.allFile.nodes[0].childImageSharp.fluid,
+      img: data.allFile.nodes[1].childImageSharp.fluid,
     },
     {
       id: 15,
@@ -168,9 +168,9 @@ const ProductGrid = () => {
       color: "Color 15",
       price: "Php 700.00",
       brand: "Z",
-      feature: "C",
+      feature: "E",
       category: "C",
-      img: data.allFile.nodes[1].childImageSharp.fluid,
+      img: data.allFile.nodes[2].childImageSharp.fluid,
     },
   ];
 
@@ -178,6 +178,9 @@ const ProductGrid = () => {
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedFeatures, setSelectedFeatures] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState([]);
+  const [selectedPrice, setSelectedPrice] = useState([])
+  const [minPrice, setMinPrice] = useState(0)
+  const [maxPrice, setMaxPrice] = useState(1000)
 
   const [products, setProducts] = useState([]); // State for filtered products
 
@@ -198,18 +201,28 @@ const ProductGrid = () => {
       );
     }
 
-    // Filter by selected feature
+      if (selectedFeatures.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedFeatures.includes(product.feature)
+      );
+    }
+    // Filter by selected category
     if (selectedCategory.length > 0) {
       filteredProducts = filteredProducts.filter((product) =>
         selectedCategory.includes(product.category)
       );
+
+      if (selectedPrice.length > 0){
+        filteredProducts = filteredProducts.filter(
+          selectedPrice => products.price >= minPrice && products.price <= maxPrice)
+      }
     }
 
     setProducts(filteredProducts);
   };
 
   useEffect(() => {
-    filterProducts(); // Call the filter function when the component mounts or when 'selectedColors' changes
+    filterProducts(); // Call the filter function when the component mounts or when filtering options are selected
   }, [selectedColors, selectedBrands, selectedFeatures, selectedCategory]);
 
   const handleFilterChange = (event, filterType) => {
@@ -285,6 +298,7 @@ const ProductGrid = () => {
             Shopping Options
           </h3>
           <div className="space-y-2  mt-5 w-full pr-5 ">
+
             {/**Brand Container */}
             <div className="accordion">
               <div className="accordion-section">
@@ -490,96 +504,14 @@ const ProductGrid = () => {
                     priceVisible ? "" : "hidden"
                   }`}
                 >
-                  <label className="flex items-center text-left">
-                    <input
-                      type="checkbox"
-                      value="Black"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Black")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Black</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Navy"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Navy")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Navy</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Khaki"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Khaki")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Khaki</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Wheat"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Wheat")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Wheat</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Orange/Navy"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Orange/Navy")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Orange/Navy</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Yellow/Navy"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Yellow/Navy")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Yellow/Navy</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="White"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("White")}
-                    />
-                    <span className="ml-2 text-gray-600 ">White</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Orange"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Orange")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Orange</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Yellow"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Yellow")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Yellow</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      value="Stone"
-                      onChange={handleFilterChange}
-                      checked={selectedColors.includes("Stone")}
-                    />
-                    <span className="ml-2 text-gray-600 ">Stone</span>
-                  </label>
+                 <label>
+                  Min Price:
+                  <input type="number" value={minPrice} onChange={e => setMinPrice(parseInt(e.target.value,10))}></input>
+                 </label>
+                 <label>
+                  Max Price:
+                  <input type="number" value={maxPrice} onChange={e => setMaxPrice(parseInt(e.target.value,10))}></input>
+                 </label>
                 </div>
               </div>
             </div>
@@ -611,32 +543,32 @@ const ProductGrid = () => {
                     featureVisible ? "" : "hidden"
                   }`}
                 >
-                  <label className="flex items-center">
+                  <label className="flex items-center text-left">
                     <input
                       type="checkbox"
-                      value="Feature A"
+                      value="Q"
                       onChange={(event) => handleFilterChange(event, "feature")}
-                      checked={selectedFeatures.includes("A")}
+                      checked={selectedFeatures.includes("Q")}
                     />
-                    <span className="ml-2 text-gray-600 ">Feature A</span>
+                    <span className="ml-2 text-gray-600 ">Feature Q</span>
                   </label>
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      value="Feature B"
+                      value="W"
                       onChange={(event) => handleFilterChange(event, "feature")}
-                      checked={selectedFeatures.includes("B")}
+                      checked={selectedFeatures.includes("W")}
                     />
-                    <span className="ml-2 text-gray-600 ">Feature B</span>
+                    <span className="ml-2 text-gray-600 ">Feature W</span>
                   </label>
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      value="Feature C"
+                      value="E"
                       onChange={(event) => handleFilterChange(event, "feature")}
-                      checked={selectedFeatures.includes("C")}
+                      checked={selectedFeatures.includes("E")}
                     />
-                    <span className="ml-2 text-gray-600 ">Feature C</span>
+                    <span className="ml-2 text-gray-600 ">Feature E</span>
                   </label>
                 </div>
               </div>
@@ -672,7 +604,7 @@ const ProductGrid = () => {
                   <label className="flex items-center text-left">
                     <input
                       type="checkbox"
-                      value="Category A"
+                      value="A"
                       onChange={(event) =>
                         handleFilterChange(event, "category")
                       }
@@ -683,7 +615,7 @@ const ProductGrid = () => {
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      value="Category B"
+                      value="B"
                       onChange={(event) =>
                         handleFilterChange(event, "category")
                       }
@@ -694,7 +626,7 @@ const ProductGrid = () => {
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      value="Category C"
+                      value="C"
                       onChange={(event) =>
                         handleFilterChange(event, "category")
                       }
