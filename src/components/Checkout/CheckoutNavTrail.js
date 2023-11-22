@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "gatsby";
 
 const CheckoutNavTrail = () => {
   return (
@@ -10,7 +11,7 @@ const CheckoutNavTrail = () => {
       <div>
         <ol className='list-none flex space-x-2'>
           <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Home /</li>
-          <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Cart /  </li>
+         <Link to="../Cart"> <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Cart /  </li> </Link>
           <li className='flex items-center text-gray-500 hover:text-underline hover:cursor-pointer hover:text-primary'>Checkout</li>
         </ol>
       </div> 

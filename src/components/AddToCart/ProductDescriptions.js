@@ -101,11 +101,11 @@ pharetra.
             Related Products{" "}
           </h1>{" "}
     </div>
-      <div className="grid grid-cols-12 gap-4 bg-gray-100 pt-[25px] pb-[50px] border">
+      <div className="grid grid-cols-12 gap-4 bg-gray-100 pt-[25px] pb-[50px]">
         <div className="col-span-1"></div>
-        <div className="col-span-10 grid md:grid-cols-4 grid-cols-2 border justify-evenly gap-5">
+        <div className="col-span-10 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
         
-          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:border-primary">
+          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware04.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
               {" "}
@@ -125,7 +125,7 @@ WWG17220{" "}
               {/* Cart Icon */}
             </button>
           </div>
-          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:border-primary">
+          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware01.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
               {" "}
@@ -145,7 +145,7 @@ WWG17220{" "}
               {/* Cart Icon */}
             </button>
           </div>
-          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:border-primary">
+          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware02.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
               {" "}
@@ -165,7 +165,7 @@ WWG17220{" "}
               {/* Cart Icon */}
             </button>
           </div>
-          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:border-primary">
+          <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
               {" "}
