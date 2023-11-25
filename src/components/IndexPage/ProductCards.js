@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 const ProductCards = () => {
   return (
     <div>
-      <div className="bg-white grid md:grid-cols-2 grid-cols-1">
+      <div className="bg-white grid md:grid-cols-2 grid-cols-1 ">
         <div className="col-span-1 m-5">
           <StaticImage
             src="./IndexPageImages/DoorControl.png"
@@ -22,18 +22,19 @@ const ProductCards = () => {
       </div>
 
       <div className="grid grid-cols-12 bg-gray-100 pt-5 ">
-        <div className="col-span-2"></div>
-        <div className="col-span-8">
+        <div className="md:col-span-2 col-span-1 "></div>
+        <div className="md:col-span-8 col-span-10">
           {" "}
-          <h1 className="text-3xl ml-5 text-primary align-center font-bold ">
+          <h1 className="text-2xl lg:text-3xl ml-5 text-primary align-center font-bold ">
             {" "}
             <Link to="ProductsPage" className="hover:underline">Popular Products</Link>
           </h1>{" "}
         </div>
+        <div className="md:col-span-2 col-span-1 "></div>
       </div>
-      <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5">
-        <div className="col-span-2"></div>
-        <div className="col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
+      <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5 ">
+        <div className="md:col-span-2 col-span-1"></div>
+        <div className="col-span-10 md:col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
           <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
@@ -111,21 +112,23 @@ const ProductCards = () => {
             </button>
           </div>
         </div>
-        <div className="col-span-2"></div>
+        <div className="col-span-1 md:col-span-2"></div>
       </div>
-      <div className="grid grid-cols-12 bg-gray-100 pt-5">
-        <div className="col-span-2"></div>
-        <div className="col-span-8">
+      <div className="grid grid-cols-12 bg-gray-100 pt-5 ">
+        <div className="col-span-1 md:col-span-2"></div>
+        <div className="col-span-10 md:col-span-8">
           {" "}
-          <h1 className="text-3xl ml-5 text-primary align-center font-bold hover:underline cursor-pointer">
+          <h1 className="text-2xl lg:text-3xl ml-5 text-primary align-center font-bold hover:underline cursor-pointer">
             {" "}
             New Arrival{" "}
           </h1>{" "}
         </div>
+        <div className="col-span-1 md:col-span-2"></div>
       </div>
-      <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5">
-        <div className="col-span-2"></div>
-        <div className="col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
+
+      <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5 ">
+        <div className="col-span-1 md:col-span-2"></div>
+        <div className="col-span-10 lg:col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
           <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
@@ -203,12 +206,12 @@ const ProductCards = () => {
             </button>
           </div>
         </div>
-        <div className="col-span-2"></div>
+        <div className="col-span-1 md:col-span-2"></div>
       </div>
 
       <div className="grid grid-cols-12 bg-white p-5 ">
-        <div className="col-span-2"></div>
-        <div className="col-span-8 grid md:grid-cols-3 grid-cols-1 gap-5">
+        <div className="col-span-1 md:col-span-2"></div>
+        <div className="col-span-10 md:col-span-8 grid md:grid-cols-3 grid-cols-1 gap-5">
           <div className="col-span-1">
             <StaticImage
               src="./IndexPageImages/IndexPageImage01.png"
@@ -230,7 +233,7 @@ const ProductCards = () => {
             />
           </div>
         </div>
-        <div className="col-span-2"></div>
+        <div className="col-span-1 md:col-span-2"></div>
       </div>
     </div>
   );

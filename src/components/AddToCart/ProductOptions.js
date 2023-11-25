@@ -30,8 +30,8 @@ const ProductOptions = () => {
   };
 
   return (
-    <div className="mt-[25px]">
-      <div className=" ml-[150px]">
+    <div className="mt-[5%]">
+      <div className=" ml-[10%]">
         <Link to="/"> <span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
           Home /
         </span></Link>
@@ -53,7 +53,7 @@ const ProductOptions = () => {
           <div className="flex w-full justify-center mb-5">
             <StaticImage
               src="../ProductImages/Hardware04.jpg"
-              className="m-5 w-3/4 h-[500px] cursor-pointer "
+              className="m-5 lg:w-3/4 w-full lg:h-[500px] cursor-pointer "
             ></StaticImage>
           </div>
           <div className="grid grid-cols-4 px-[90px] gap-3 w-full">

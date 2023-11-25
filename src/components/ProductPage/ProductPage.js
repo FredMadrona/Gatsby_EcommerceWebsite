@@ -5,7 +5,6 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { BsCart2, BsHeart } from "react-icons/bs";
 
 
-
 const ProductGrid = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -26,7 +25,8 @@ const ProductGrid = () => {
       id: 1,
       name: "Stainless Steel Bathroom Hardware Black",
       color: "Black",
-      price: "Php 1,000.00",
+      price: "1,000.00",
+      priceRange: "above",
       brand: "X",
       feature: "X",
       category: "Q",
@@ -36,7 +36,8 @@ const ProductGrid = () => {
       id: 2,
       name: "Exposed Door Closer Series Navy",
       color: "Navy",
-      price: "Php 500.00",
+      price: "300.00",
+      priceRange: "below",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -46,7 +47,8 @@ const ProductGrid = () => {
       id: 3,
       name: "Intelligent Door Lock N6700 Khaki",
       color: "Khaki",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "Z",
       feature: "E",
       category: "C",
@@ -56,7 +58,8 @@ const ProductGrid = () => {
       id: 4,
       name: "Stainless Steel Bathroom Hardware lock Wheat",
       color: "Wheat",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "below",
       brand: "Y",
       feature: "Q",
       category: "B",
@@ -64,9 +67,10 @@ const ProductGrid = () => {
     },
     {
       id: 5,
-      name: "Stainless Steel Bathroom Hardware Orange/Navy",
-      color: "Orange/Navy",
-      price: "Php 500.00",
+      name: "Stainless Steel Bathroom Hardware White",
+      color: "White",
+      price: "1,000.00",
+      priceRange: "above",
       brand: "X",
       feature: "W",
       category: "C",
@@ -76,7 +80,8 @@ const ProductGrid = () => {
       id: 6,
       name: "Stainless Steel Bathroom Hardware lock Yellow",
       color: "Yellow",
-      price: "Php 1,000.00",
+      price: "1,000.00",
+      priceRange: "above",
       brand: "Z",
       feature: "E",
       category: "A",
@@ -86,7 +91,7 @@ const ProductGrid = () => {
       id: 7,
       name: "Exposed Door Closer Series Stone",
       color: "Stone",
-      price: "Php 500.00",
+      price: "500.00",
       brand: "X",
       feature: "Q",
       category: "C",
@@ -96,7 +101,8 @@ const ProductGrid = () => {
       id: 8,
       name: "Intelligent Door Lock N6700 Black",
       color: "Black",
-      price: "Php 800.00",
+      price: "300.00",
+      priceRange: "below",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -104,9 +110,10 @@ const ProductGrid = () => {
     },
     {
       id: 9,
-      name: "Exposed Door Closer Series Navy",
-      color: "Navy",
-      price: "Php 500.00",
+      name: "Exposed Door Closer Series Khaki",
+      color: "Khaki",
+      price: "500.00",
+      priceRange: "below",
       brand: "Z",
       feature: "E",
       category: "A",
@@ -114,9 +121,10 @@ const ProductGrid = () => {
     },
     {
       id: 10,
-      name: "Stainless Steel Bathroom Hardware Black",
-      color: "Black",
-      price: "Php 200.00",
+      name: "Stainless Steel Bathroom Hardware Yellow",
+      color: "Yellow",
+      price: "200.00",
+      priceRange: "below",
       brand: "X",
       feature: "Q",
       category: "A",
@@ -126,7 +134,8 @@ const ProductGrid = () => {
       id: 11,
       name: "Exposed Door Closer Series Navy",
       color: "Navy",
-      price: "Php 300.00",
+      price: "300.00",
+      priceRange: "below",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -136,7 +145,8 @@ const ProductGrid = () => {
       id: 12,
       name: "Intelligent Door Lock N6700 Yellow",
       color: "Yellow",
-      price: "Php 400.00",
+      price: "400.00",
+      priceRange: "below",
       brand: "Z",
       feature: "Z",
       category: "E",
@@ -146,7 +156,8 @@ const ProductGrid = () => {
       id: 13,
       name: "Stainless Steel Bathroom Hardware Black",
       color: "Black",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "below",
       brand: "X",
       feature: "Q",
       category: "A",
@@ -154,9 +165,10 @@ const ProductGrid = () => {
     },
     {
       id: 14,
-      name: "Exposed Door Closer Series Stone",
-      color: "Stone",
-      price: "Php 600.00",
+      name: "Exposed Door Closer Series Yellow",
+      color: "Yellow",
+      price: "600.00",
+      priceRange: "above",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -166,7 +178,8 @@ const ProductGrid = () => {
       id: 15,
       name: "Intelligent Door Lock N6700 Black",
       color: "Black",
-      price: "Php 700.00",
+      price: "700.00",
+      priceRange: "above",
       brand: "Z",
       feature: "E",
       category: "C",
@@ -176,7 +189,8 @@ const ProductGrid = () => {
       id: 16,
       name: "Stainless Steel Bathroom Hardware Navy",
       color: "Navy",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "X",
       feature: "Q",
       category: "A",
@@ -186,7 +200,8 @@ const ProductGrid = () => {
       id: 17,
       name: "Intelligent Door Lock N6700 Khaki",
       color: "Khaki",
-      price: "Php 500.00",
+      price: "400.00",
+      priceRange: "below",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -194,9 +209,10 @@ const ProductGrid = () => {
     },
     {
       id: 18,
-      name: "Exposed Door Closer Series Wheat",
-      color: "Wheat",
-      price: "Php 400.00",
+      name: "Exposed Door Closer Series Khaki",
+      color: "Khaki",
+      price: "400.00",
+      priceRange: "below",
       brand: "Z",
       feature: "E",
       category: "C",
@@ -204,9 +220,10 @@ const ProductGrid = () => {
     },
     {
       id: 19,
-      name: "Stainless Steel Bathroom Hardware Orange/Navy",
-      color: "Orange/Navy",
-      price: "Php 1000.00",
+      name: "Stainless Steel Bathroom Hardware White",
+      color: "White",
+      price: "1000.00",
+      priceRange: "above",
       brand: "X",
       feature: "Q",
       category: "A",
@@ -216,7 +233,8 @@ const ProductGrid = () => {
       id: 20,
       name: "Exposed Door Closer Series Yellow/Navy",
       color: "Yellow/Navy",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -226,7 +244,8 @@ const ProductGrid = () => {
       id: 21,
       name: "Intelligent Door Lock N6700 White",
       color: "White",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "above",
       brand: "Z",
       feature: "E",
       category: "C",
@@ -236,7 +255,8 @@ const ProductGrid = () => {
       id: 22,
       name: "Stainless Steel Bathroom Hardware Orange",
       color: "Orange",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "X",
       feature: "Q",
       category: "A",
@@ -246,7 +266,8 @@ const ProductGrid = () => {
       id: 23,
       name: "Exposed Door Closer Series Yellow",
       color: "Yellow",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "above",
       brand: "Y",
       feature: "W",
       category: "B",
@@ -256,7 +277,8 @@ const ProductGrid = () => {
       id: 24,
       name: "Intelligent Door Lock N6700 Stone",
       color: "Stone",
-      price: "Php 1000.00",
+      price: "1000.00",
+      priceRange: "above",
       brand: "Z",
       feature: "E",
       category: "C",
@@ -266,7 +288,8 @@ const ProductGrid = () => {
       id: 25,
       name: "Stainless Steel Bathroom Hardware Black",
       color: "Black",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "above",
       brand: "X",
       feature: "Q",
       category: "A",
@@ -276,7 +299,8 @@ const ProductGrid = () => {
       id: 26,
       name: "Exposed Door Closer Series Navy",
       color: "Navy",
-      price: "Php 1000.00",
+      price: "1000.00",
+      priceRange: "above",
       brand: "Z",
       feature: "W",
       category: "B",
@@ -286,7 +310,8 @@ const ProductGrid = () => {
       id: 27,
       name: "Intelligent Door Lock N6700 Khaki",
       color: "Khaki",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "X",
       feature: "E",
       category: "C",
@@ -296,7 +321,8 @@ const ProductGrid = () => {
       id: 28,
       name: "Stainless Steel Bathroom Hardware Wheat",
       color: "Wheat",
-      price: "Php 1000.00",
+      price: "1000.00",
+      priceRange: "above",
       brand: "Y",
       feature: "Q",
       category: "A",
@@ -306,7 +332,8 @@ const ProductGrid = () => {
       id: 29,
       name: "Exposed Door Closer Series Orange/Navy",
       color: "Orange/Navy",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "below",
       brand: "Z",
       feature: "W",
       category: "B",
@@ -316,7 +343,8 @@ const ProductGrid = () => {
       id: 30,
       name: "Intelligent Door Lock N6700 Yellow/Navy",
       color: "Yellow/Navy",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "X",
       feature: "E",
       category: "C",
@@ -326,7 +354,8 @@ const ProductGrid = () => {
       id: 31,
       name: "Stainless Steel Bathroom Hardware White",
       color: "White",
-      price: "Php 1000.00",
+      price: "1000.00",
+      priceRange: "above",
       brand: "Y",
       feature: "Q",
       category: "A",
@@ -336,7 +365,8 @@ const ProductGrid = () => {
       id: 32,
       name: "Exposed Door Closer Series Orange",
       color: "Orange",
-      price: "Php 500.00",
+      price: "500.00",
+      priceRange: "below",
       brand: "Y",
       feature: "Q",
       category: "A",
@@ -346,7 +376,8 @@ const ProductGrid = () => {
       id: 33,
       name: "Intelligent Door Lock N6700 Yellow",
       color: "Yellow",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "Z",
       feature: "W",
       category: "B",
@@ -356,7 +387,8 @@ const ProductGrid = () => {
       id: 34,
       name: "Stainless Steel Bathroom Hardware Stone",
       color: "Stone",
-      price: "Php 1000.00",
+      price: "1000.00",
+      priceRange: "above",
       brand: "X",
       feature: "E",
       category: "C",
@@ -366,7 +398,8 @@ const ProductGrid = () => {
       id: 36,
       name: "Exposed Door Closer Series Black",
       color: "Black",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "Y",
       feature: "Q",
       category: "A",
@@ -376,7 +409,8 @@ const ProductGrid = () => {
       id: 37,
       name: "Intelligent Door Lock N6700 Navy",
       color: "Navy",
-      price: "Php 1000.00",
+      price: "1000.00",
+      priceRange: "above",
       brand: "Z",
       feature: "W",
       category: "B",
@@ -386,7 +420,8 @@ const ProductGrid = () => {
       id: 38,
       name: "Intelligent Door Lock N6700 Orange",
       color: "Orange",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "X",
       feature: "E",
       category: "C",
@@ -396,7 +431,8 @@ const ProductGrid = () => {
       id: 39,
       name: "Exposed Door Closer Series Series Orange",
       color: "Orange",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "Y",
       feature: "Q",
       category: "A",
@@ -406,7 +442,8 @@ const ProductGrid = () => {
       id: 40,
       name: "Exposed Door Closer Series Series Orange",
       color: "Orange",
-      price: "Php 100.00",
+      price: "100.00",
+      priceRange: "below",
       brand: "Z",
       feature: "W",
       category: "B",
@@ -416,7 +453,8 @@ const ProductGrid = () => {
       id: 41,
       name: "Stainless Steel Bathroom Hardware Orange",
       color: "Orange",
-      price: "Php 1000.00",
+      price: "1,000.00",
+      priceRange: "above",
       brand: "X",
       feature: "E",
       category: "C",
@@ -426,7 +464,8 @@ const ProductGrid = () => {
       id: 42,
       name: "Stainless Steel Bathroom Hardware Orange/Navy",
       color: "Orange/Navy",
-      price: "Php 1000.00",
+      price: "1,000.00",
+      priceRange: "above",
       brand: "Y",
       feature: "Q",
       category: "A",
@@ -436,7 +475,8 @@ const ProductGrid = () => {
       id: 43,
       name: "Stainless Steel Bathroom Hardware  Orange/Navy",
       color: "Orange/Navy",
-      price: "Php 800.00",
+      price: "800.00",
+      priceRange: "above",
       brand: "Z",
       feature: "W",
       category: "B",
@@ -444,13 +484,696 @@ const ProductGrid = () => {
     },
     {
       id: 44,
-      name: "Stainless Steel Bathroom Hardware  Orange/Navy",
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
       color: "Orange/Navy",
-      price: "Php 300.00",
+      price: "300.00",
+      priceRange: "below",
       brand: "X",
       feature: "E",
       category: "C",
       img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 45,
+      name: "Stainless Steel Bathroom Hardware Stone",
+      color: "Stone",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 46,
+      name: "Exposed Door Closer Series Series Orange",
+      color: "Orange",
+      price: "1,000.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 47,
+      name: "Exposed Door Closer Series Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 48,
+      name: "Intelligent Door Lock N6700 White",
+      color: "White",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 49,
+      name: "Stainless Steel Bathroom Hardware Orange",
+      color: "Orange",
+      price: "800.00",
+      priceRange: "above",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 50,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 51,
+      name: "Intelligent Door Lock N6700 Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "1,000.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 52,
+      name: "Stainless Steel Bathroom Hardware Wheat",
+      color: "Wheat",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 53,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "1,000.00",
+      priceRange: "above",
+      brand: "X",
+      feature: "X",
+      category: "Q",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 54,
+      name: "Exposed Door Closer Series Navy",
+      color: "Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 55,
+      name: "Intelligent Door Lock N6700 Khaki",
+      color: "Khaki",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 56,
+      name: "Stainless Steel Bathroom Hardware lock Wheat",
+      color: "Wheat",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "Q",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 57,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "W",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 58,
+      name: "Stainless Steel Bathroom Hardware lock Yellow",
+      color: "Yellow",
+      price: "100.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 59,
+      name: "Exposed Door Closer Series Stone",
+      color: "Stone",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 60,
+      name: "Intelligent Door Lock N6700 Black",
+      color: "Black",
+      price: "300.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 61,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 62,
+      name: "Stainless Steel Bathroom Hardware Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "200.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 63,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 64,
+      name: "Intelligent Door Lock N6700 Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "400.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 65,
+      name: "Stainless Steel Bathroom Hardware Wheat",
+      color: "Wheat",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 66,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "100.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "X",
+      category: "Q",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 67,
+      name: "Exposed Door Closer Series Navy",
+      color: "Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 68,
+      name: "Intelligent Door Lock N6700 Khaki",
+      color: "Khaki",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 69,
+      name: "Stainless Steel Bathroom Hardware lock Wheat",
+      color: "Wheat",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "Q",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 70,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "W",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 71,
+      name: "Stainless Steel Bathroom Hardware lock Yellow",
+      color: "Yellow",
+      price: "100.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 72,
+      name: "Exposed Door Closer Series Stone",
+      color: "Stone",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 73,
+      name: "Intelligent Door Lock N6700 Black",
+      color: "Black",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 74,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 75,
+      name: "Stainless Steel Bathroom Hardware Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "200.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 76,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 77,
+      name: "Intelligent Door Lock N6700 Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "100.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 78,
+      name: "Stainless Steel Bathroom Hardware Wheat",
+      color: "Wheat",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 79,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "100.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "X",
+      category: "Q",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 80,
+      name: "Exposed Door Closer Series Navy",
+      color: "Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 81,
+      name: "Intelligent Door Lock N6700 Khaki",
+      color: "Khaki",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 82,
+      name: "Stainless Steel Bathroom Hardware lock Wheat",
+      color: "Wheat",
+      price: "700.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "Q",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 83,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "600.00",
+      priceRange: "above",
+      brand: "X",
+      feature: "W",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 84,
+      name: "Stainless Steel Bathroom Hardware lock Yellow",
+      color: "Yellow",
+      price: "1,000.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 85,
+      name: "Exposed Door Closer Series Stone",
+      color: "Stone",
+      price: "700.00",
+      priceRange: "above",
+      brand: "X",
+      feature: "Q",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 86,
+      name: "Intelligent Door Lock N6700 Black",
+      color: "Black",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 87,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "600.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 88,
+      name: "Stainless Steel Bathroom Hardware Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "700.00",
+      priceRange: "above",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 89,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "600.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 90,
+      name: "Intelligent Door Lock N6700 Yellow/Navy",
+      color: "Yellow/Navy",
+      price: "1,000.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 91,
+      name: "Stainless Steel Bathroom Hardware Wheat",
+      color: "Wheat",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 92,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "100.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "X",
+      category: "Q",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 93,
+      name: "Exposed Door Closer Series Navy",
+      color: "Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 94,
+      name: "Intelligent Door Lock N6700 Khaki",
+      color: "Khaki",
+      price: "400.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 95,
+      name: "Stainless Steel Bathroom Hardware lock Wheat",
+      color: "Wheat",
+      price: "400.00",
+      priceRange: "below",
+      brand: "Y",
+      feature: "Q",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 96,
+      name: "Stainless Steel Bathroom Hardware Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "W",
+      category: "C",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 97,
+      name: "Stainless Steel Bathroom Hardware lock Yellow",
+      color: "Yellow",
+      price: "1,000.00",
+      priceRange: "above",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[1].childImageSharp.fluid,
+    },
+    {
+      id: 98,
+      name: "Exposed Door Closer Series Stone",
+      color: "Stone",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 99,
+      name: "Intelligent Door Lock N6700 Black",
+      color: "Black",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 100,
+      name: "Exposed Door Closer Series Orange/Navy",
+      color: "Orange/Navy",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 101,
+      name: "Stainless Steel Bathroom Hardware White",
+      color: "White",
+      price: "100.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "A",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 102,
+      name: "Exposed Door Closer Series White",
+      color: "White",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 103,
+      name: "Exposed Door Closer Series White",
+      color: "White",
+      price: "500.00",
+      priceRange: "below",
+      brand: "X",
+      feature: "Q",
+      category: "C",
+      img: data.allFile.nodes[2].childImageSharp.fluid,
+    },
+    {
+      id: 104,
+      name: "Intelligent Door Lock N6700 White",
+      color: "White",
+      price: "800.00",
+      priceRange: "above",
+      brand: "Y",
+      feature: "W",
+      category: "B",
+      img: data.allFile.nodes[4].childImageSharp.fluid,
+    },
+    {
+      id: 105,
+      name: "Exposed Door Closer Series White",
+      color: "White",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
+    },
+    {
+      id: 106,
+      name: "Exposed Door Closer Series Orange",
+      color: "Orange",
+      price: "500.00",
+      priceRange: "below",
+      brand: "Z",
+      feature: "E",
+      category: "A",
+      img: data.allFile.nodes[0].childImageSharp.fluid,
     },
   ];
 
@@ -458,12 +1181,10 @@ const ProductGrid = () => {
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedFeatures, setSelectedFeatures] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState([]);
-  const [selectedPrice, setSelectedPrice] = useState([])
-  const [minPrice, setMinPrice] = useState(0)
-  const [maxPrice, setMaxPrice] = useState(1000)
-
+  const [selectedPriceRange, setSelectedPriceRange] = useState([])
   const [products, setProducts] = useState([]); // State for filtered products
-
+  
+  
   const filterProducts = () => {
     let filteredProducts = allProducts;
 
@@ -480,8 +1201,8 @@ const ProductGrid = () => {
         selectedBrands.includes(product.brand)
       );
     }
-
-      if (selectedFeatures.length > 0) {
+ // Filter by selected Feature
+    if (selectedFeatures.length > 0) {
       filteredProducts = filteredProducts.filter((product) =>
         selectedFeatures.includes(product.feature)
       );
@@ -491,19 +1212,20 @@ const ProductGrid = () => {
       filteredProducts = filteredProducts.filter((product) =>
         selectedCategory.includes(product.category)
       );
-
-      if (selectedPrice.length > 0){
-        filteredProducts = filteredProducts.filter(
-          selectedPrice => products.price >= minPrice && products.price <= maxPrice)
-      }
     }
-
+    // Filter by selected Price Rage
+    if (selectedPriceRange.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedPriceRange.includes(product.priceRange)
+      );
+    }
+  
     setProducts(filteredProducts);
   };
 
   useEffect(() => {
     filterProducts(); // Call the filter function when the component mounts or when filtering options are selected
-  }, [selectedColors, selectedBrands, selectedFeatures, selectedCategory]);
+  }, [selectedColors, selectedBrands, selectedFeatures, selectedCategory, selectedPriceRange]);
 
   const handleFilterChange = (event, filterType) => {
     const value = event.target.value;
@@ -537,7 +1259,16 @@ const ProductGrid = () => {
       } else {
         setSelectedCategory([...selectedCategory, value]);
       }
+    } else if (filterType === "priceRange") {
+      if (selectedPriceRange.includes(value)) {
+        setSelectedPriceRange(
+          selectedPriceRange.filter((priceRange) => priceRange !== value)
+        );
+      } else {
+        setSelectedPriceRange([...selectedPriceRange, value]);
+      }
     }
+
   };
 
   // for Accordion
@@ -567,7 +1298,6 @@ const ProductGrid = () => {
     setColorVisible(!colorVisible);
   };
 
-
   return (
     <div>
       <div className="bg-gray-100 p-4 grid grid-cols-9 gap-4 ">
@@ -578,7 +1308,6 @@ const ProductGrid = () => {
             Shopping Options
           </h3>
           <div className="space-y-2  mt-5 w-full pr-5 ">
-
             {/**Brand Container */}
             <div className="accordion">
               <div className="accordion-section">
@@ -612,7 +1341,7 @@ const ProductGrid = () => {
                       onChange={(event) => handleFilterChange(event, "brand")}
                       checked={selectedBrands.includes("X")}
                     />
-                    <span className="ml-2 text-gray-600 ">X</span>
+                    <span className="ml-2 text-gray-600">X</span>
                   </label>
                   <label className="flex items-center">
                     <input
@@ -778,20 +1507,29 @@ const ProductGrid = () => {
                     <FaChevronUp className="mt-1 hover:cursor-pointer" />
                   )}
                 </div>
-
                 <div
                   className={`accordion-content p-2 transition duration-300 ${
                     priceVisible ? "" : "hidden"
                   }`}
                 >
-                 <label>
-                  Min Price:
-                  <input type="number" value={minPrice} onChange={e => setMinPrice(parseInt(e.target.value,10))}></input>
-                 </label>
-                 <label>
-                  Max Price:
-                  <input type="number" value={maxPrice} onChange={e => setMaxPrice(parseInt(e.target.value,10))}></input>
-                 </label>
+                <label className="flex items-center text-left">
+                    <input
+                      type="checkbox"
+                      value="below"
+                      onChange={(event) => handleFilterChange(event, "priceRange")}
+                      checked={selectedPriceRange.includes("below")}
+                      />
+                    <span className="ml-2 text-gray-600 cursor-pointer"> Below Php500.00 </span>
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      value="above"
+                      onChange={(event) => handleFilterChange(event, "priceRange")}
+                      checked={selectedPriceRange.includes("above")}
+                    />
+                    <span className="ml-2 text-gray-600 cursor-pointer "> Above Php500.00</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -924,7 +1662,7 @@ const ProductGrid = () => {
         {/* Products */}
         <div className="col-span-5 ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {products.slice(0,9).map((product) => (
+            {products.slice(0, 9).map((product) => (
               <div
                 key={product.id}
                 className="bg-white p-4 rounded hover:cursor-pointer border hover:shadow-lg"
@@ -942,10 +1680,11 @@ const ProductGrid = () => {
                   {/* Heart Icon */}
                 </div>
                 <Link to="../about">
-                <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
-                  Add to cart <BsCart2 className="mx-2" />
-                  {/* Cart Icon */}
-                </button></Link>
+                  <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
+                    Add to cart <BsCart2 className="mx-2" />
+                    {/* Cart Icon */}
+                  </button>
+                </Link>
               </div>
             ))}
           </div>

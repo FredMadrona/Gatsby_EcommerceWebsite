@@ -23,8 +23,8 @@ const CartContent = () => {
     <div>
       <div className="grid grid-cols-12 bg-gray-100">
         <div className="cols-span-1"></div>
-        <div className="col-span-10 flex lg:flex-cols flex-row p-5">
-          <div className=" w-[90%]">
+        <div className="col-span-10 flex flex-col lg:flex-row lg:p-5 gap-5 border border-primary">
+          <div className=" lg:w-[90%] w-full">
             <table className="w-full bg-white rounded">
               <thead>
                 <tr className="py-[100px] border-b border-black">
