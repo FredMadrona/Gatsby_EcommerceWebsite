@@ -20,7 +20,7 @@ const HorizontalMenu = () => {
         {menuItems.map((item, index) => (
           <div
             key={index}
-            className="col-span-1 text-xs text-white text-center py-2 rounded-lg hover:font-bold cursor-pointer "
+            className="col-span-1 text-xs text-white text-center py-2 rounded-lg hover:text-gray-200 cursor-pointer "
           >
             {item}
           </div>
