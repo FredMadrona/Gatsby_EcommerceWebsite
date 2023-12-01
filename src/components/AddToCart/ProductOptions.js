@@ -48,34 +48,34 @@ const ProductOptions = () => {
           Stainless Steel Bathroom Hardware WWG17220{" "}
         </span>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 m-5 mx-[60px]">
-        <div className="cols-span-1">
-          <div className="flex w-full justify-center mb-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 m-5 mx-[60px] ">
+        <div className="cols-span-1 flex lg:flex-col flex-row">
+          <div className="flex w-full  justify-center">
             <StaticImage
               src="../ProductImages/Hardware04.jpg"
-              className="m-5 lg:w-3/4 w-full lg:h-[500px] cursor-pointer "
+              className="lg:m-5  cursor-pointer "
             ></StaticImage>
           </div>
-          <div className="grid grid-cols-4 px-[90px] gap-3 w-full">
-            <div className="col-span-1 border hover:shadow-md border-black p-3 ">
+          <div className="flex lg:flex-row flex-col  gap-3 lg:w-full w-[20%] my-auto items-center lg:px-[5%]  h-auto">
+            <div className="w-auto border hover:shadow-md border-black lg:p-3 p-1">
               <StaticImage
                 src="../ProductImages/Hardware04.jpg"
                 className="hover:cursor-pointer "
               ></StaticImage>
             </div>
-            <div className="col-span-1 border hover:shadow-md border-black p-3 ">
+            <div className="w-auto border hover:shadow-md border-black lg:p-3 p-1">
               <StaticImage
                 src="../ProductImages/Hardware04.jpg"
                 className="hover:cursor-pointer "
               ></StaticImage>
             </div>
-            <div className="col-span-1 border hover:shadow-md border-black p-3 ">
+            <div className="w-auto border hover:shadow-md border-black lg:p-3 p-1">
               <StaticImage
                 src="../ProductImages/Hardware04.jpg"
                 className="hover:cursor-pointer "
               ></StaticImage>
             </div>
-            <div className="col-span-1 border hover:shadow-md border-black p-3 ">
+            <div className="w-auto border hover:shadow-md border-black lg:p-3 p-1">
               <StaticImage
                 src="../ProductImages/Hardware04.jpg"
                 className="hover:cursor-pointer "
@@ -86,23 +86,23 @@ const ProductOptions = () => {
 
         <div className="cols-span-1">
           <div className="w-3/4 mt-5">
-            <h1 className="text-2xl text-black text-left font-bold cursor-pointer">
+            <h1 className="lg:text-2xl text-xl text-black text-left font-bold cursor-pointer">
               {" "}
-              Stainelss Steel Bathroom Hardware WWG17220
+              Stainless Steel Bathroom Hardware WWG17220
             </h1>
           </div>
           <div className="w-3/4 mt-2">
-            <p className="text-sm text-gray-500">
+            <p className="lg:text-sm text-xs text-gray-500">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
           <div className="mt-5">
-            <h6 className="font-semibold text-md mb-3"> Price:</h6>
-            <p className="text-xl font-bold"> 0.00</p>
+            <h6 className="font-semibold lg:text-md text-sm lg:mb-3 mb-1"> Price:</h6>
+            <p className="lg:text-xl text-md font-bold"> 0.00</p>
           </div>
-          <div className="my-5">
-            <p className="font-semibold text-md cursor-pointer"> Sizes:</p>
+          <div className="lg:my-5 my-2">
+            <p className="font-semibold lg:text-md text-sm cursor-pointer"> Sizes:</p>
             <div
               onClick={toggleDropdown}
               onKeyPress={(e) => {
@@ -112,7 +112,7 @@ const ProductOptions = () => {
               }}
               role="button"
               tabIndex={0}
-              className="border border-gray-400 p-1  px-2 flex items-between justify-between w-1/2 mt-5 cursor-pointer "
+              className="border border-gray-400 p-1  px-2 flex items-between justify-between w-1/2 lg:mt-5 mt-1 cursor-pointer "
             >
               {selectedOption ? selectedOption : "Select Size"}
               {isOpen ? (
@@ -145,28 +145,28 @@ const ProductOptions = () => {
             )}
           </div>
           <div className="mt-5">
-            <p className="font-semibold text-md mb-3"> Colours: </p>
+            <p className="font-semibold lg:text-md text-sm mb-3"> Colours: </p>
             <div className="flex flex-row gap-5">
               <button
-                className="rounded-full cursor-pointer p-5 border border-gray-400"
+                className="rounded-full cursor-pointer p-5 p-3 border border-gray-400"
                 style={{ backgroundColor: "#ffcc99" }}
                 aria-label="Color: Light Orange"
               ></button>
               <button
-                className="rounded-full cursor-pointer p-5 border border-gray-400"
+                className="rounded-full cursor-pointer p-5 p-3 border border-gray-400"
                 style={{ backgroundColor: "#333333" }}
                 aria-label="Color: Dark Gray"
               ></button>
               <button
-                className="rounded-full cursor-pointer p-5 border border-gray-400"
+                className="rounded-full cursor-pointer p-5 p-3 border border-gray-400"
                 style={{ backgroundColor: "#666633" }}
                 aria-label="Color: Olive Green"
               ></button>
             </div>
           </div>
-          <div className="mt-5 w-3/4  ">
+          <div className="lg:mt-5 mt-3 w-3/4  ">
             <p className="font-semibold text-md mb-3"> Quantity: </p>
-            <div className="grid grid-cols-2 gap-1 justify-start">
+            <div className="flex flex-row lg:w-3/4 lg:justify-between justify-start gap-3">
               <div className="cols-span-1 rounded flex flex-row">
                 <button
                   className="text-md px-[20px] text-gray-500 border border-gray-500 flex items-center justify-center"
@@ -188,8 +188,8 @@ const ProductOptions = () => {
                   +{" "}
                 </button>
               </div>
-              <div className="cols-span-1 ">
-               <Link to="../Cart"> <button className="bg-black text-white font-semibold text-sm text-center p-2 w-full">
+              <div className="w-1/4 lg:w-full ">
+               <Link to="../Cart"> <button className="bg-black text-white font-semibold lg:text-sm text-xs text-center p-2 w-full">
                   {" "}
                   Add to Cart
                 </button> </Link>

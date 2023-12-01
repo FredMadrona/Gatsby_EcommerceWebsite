@@ -33,11 +33,11 @@ const Navbar = () => {
       <div className="md:flex flex-no-wrap hidden items-start justify-center gap-4 w-full md:col-span-4 col-span-2  ">
         <div className="flex flex-row items-center  gap-1 lg:mr-5">
           <BsPerson className="h-6 w-6 text-primary cursor-pointer " />
-          <button className="text-primary text-xs font-semibold hover:font-bold ">
+          <button className="text-primary text-sm font-semibold hover:hover:text-blue-600 hover:underline ">
             Login 
           </button>
           <span className="text-primary"> | </span>
-          <button className="text-primary text-xs font-semibold hover:font-bold">
+          <button className="text-primary text-sm font-semibold hover:hover:text-blue-600 hover:underline">
             Sign up 
           </button>
           

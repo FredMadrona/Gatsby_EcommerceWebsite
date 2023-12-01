@@ -38,9 +38,9 @@ const CheckoutContent = () => {
     <div>
       <div className="grid grid-cols-12 bg-gray-100">
         <div className="col-span-1"> </div>
-        <div className="col-span-10 flex flex-row gap-5 p-5">
-          <div className="w-[70%] h-[72%] bg-white rounded p-5">
-            <h1 className="text-xl ml-3 pb-5 hover:font-semibold hover:underline cursor-pointer">
+        <div className="col-span-10 flex lg:flex-row flex-col gap-5 p-5">
+          <div className="lg:w-[70%] w-auto h-[72%] bg-white rounded p-5 border border-primary">
+            <h1 className="lg:text-xl text-lg ml-3 pb-5 hover:font-semibold hover:underline cursor-pointer">
               {" "}
               Billing Address
             </h1>
@@ -52,7 +52,7 @@ const CheckoutContent = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                   placeholder="FirstName"
-                  className="w-full py-2 px-3 text-base mt-2 border border-gray-400"
+                  className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-2 border border-gray-400"
                 />
                 <input
                   type="text"
@@ -60,7 +60,7 @@ const CheckoutContent = () => {
                   value={formData.lastName}
                   onChange={handleChange}
                   placeholder="LastName"
-                  className="w-full py-2 px-3 text-base mt-2 border border-gray-400"
+                  className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-2 border border-gray-400"
                 />
               </div>
               <input
@@ -69,7 +69,7 @@ const CheckoutContent = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email Address"
-                className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
               />
               <input
                 type="tel"
@@ -77,7 +77,7 @@ const CheckoutContent = () => {
                 value={formData.telephone}
                 onChange={handleChange}
                 placeholder="Telephone"
-                className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
               />
               <input
                 type="text"
@@ -85,7 +85,7 @@ const CheckoutContent = () => {
                 value={formData.address1}
                 onChange={handleChange}
                 placeholder="Address"
-                className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
               />
               <input
                 type="text"
@@ -93,14 +93,14 @@ const CheckoutContent = () => {
                 value={formData.address2}
                 onChange={handleChange}
                 placeholder="Address 2"
-                className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
               />
 
               <select
                 name="country"
                 value={formData.country}
                 onChange={handleChange}
-                className="w-full py-2 px-3 text-base mt-2 border placeholder-gray-500 border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-2 border placeholder-gray-500 border-gray-400"
               >
                 <option className="text-gray-500" value="" disabled>
                   Select a Country
@@ -117,7 +117,7 @@ const CheckoutContent = () => {
                   value={formData.barangay}
                   onChange={handleChange}
                   placeholder="Barangay"
-                  className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                  className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
                 />
 
                 <input
@@ -126,7 +126,7 @@ const CheckoutContent = () => {
                   value={formData.postalCode}
                   onChange={handleChange}
                   placeholder="Postal Code"
-                  className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                  className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
                 />
               </div>
 
@@ -134,7 +134,7 @@ const CheckoutContent = () => {
                 name="country"
                 value={formData.stateProvince}
                 onChange={handleChange}
-                className="w-full py-2 px-3 text-base mt-2 border placeholder-gray-500 border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-2 border placeholder-gray-500 border-gray-400"
               >
                 <option className="text-gray-500" value="" disabled>
                   State/Province
@@ -149,7 +149,7 @@ const CheckoutContent = () => {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Company"
-                className="w-full py-2 px-3 text-base mt-4 border border-gray-400"
+                className="w-full py-2 px-3 text-sm lg:placeholder-text-xs mt-4 border border-gray-400"
               />
               <label className=" text-md text-gray-400 mt-5">
                 <input
@@ -173,7 +173,7 @@ const CheckoutContent = () => {
               </label>
             </form>
           </div>
-          <div className="w-[50%] bg-white rounded py-5">
+          <div className="lg:w-[50%] w-auto bg-white rounded py-5">
             {" "}
             <div className="flex flex-row justify-between mx-[5%] text-gray-500 px-5 text-sm ">
               {" "}

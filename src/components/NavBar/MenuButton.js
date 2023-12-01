@@ -24,24 +24,24 @@ const MenuButton = () => {
       >
         <ul className="space-y-2">
           <li>
-            <div className="flex w-full items-center space-x-8 hover:font-bold">
-              <BsPerson className="text-white h-6 w-6" />
-              <button className="text-white font-sm">Login / Sign up</button>
+            <div className="flex w-full items-center space-x-8 ">
+              <BsPerson className="text-white h-6 w-6 cursor-pointer" />
+              <button className="text-white font-sm cursor-pointer hover:text-gray-300">Login / Sign up</button>
             </div>
           </li>
           <li>
-            <div className="flex w-full items-center space-x-8 hover:font-bold hover:cursor-pointer">
+            <div className="flex w-full items-center space-x-8  ">
               <svg
-                className="h-8 w-8 text-white cursor-pointer pt-1"
+                className="h-8 w-8 text-white  cursor-pointer pt-1"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >
-                <BsCart2 className="text-white h-6 w-6" />
+                <BsCart2 className="text-white h-6 w-6 cursor-pointer" />
               </svg>
-              <p className="text-white">0.00</p>
+              <p className="text-white cursor-pointer hover:text-gray-300">0.00</p>
             </div>
           </li>
         </ul>
