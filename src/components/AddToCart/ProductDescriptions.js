@@ -12,7 +12,7 @@ const ProductDescriptions = () => {
   
     return (
       <div>
-        <div className="my-8 flex flex-col justify-center lg:mx-[130px] mx-[75px] mt-[50px]">
+        <div className="my-8 flex flex-col justify-center lg:mx-[100px] mx-[10px] mt-[50px]">
         <div className="flex border-b border-gray-200 mb-5 pb-2 ">
           <button
             onClick={() => handleTabClick(1)}

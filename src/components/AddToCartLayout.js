@@ -17,7 +17,6 @@ const AddToCartLayout = ({ pageTitle, children }) => {
         <Navbar></Navbar>
         <HorizontalMenu></HorizontalMenu>
         <DropdownMenu> </DropdownMenu>
-        
         <ProductOptions></ProductOptions>
         <ProductDescriptions></ProductDescriptions>
         <FooterMenu></FooterMenu>    

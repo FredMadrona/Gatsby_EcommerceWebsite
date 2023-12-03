@@ -36,7 +36,7 @@ const Navbar = () => {
           <button className="text-primary text-sm font-semibold hover:hover:text-blue-600 hover:underline ">
             Login 
           </button>
-          <span className="text-primary"> | </span>
+          <span className="text-primary"> / </span>
           <button className="text-primary text-sm font-semibold hover:hover:text-blue-600 hover:underline">
             Sign up 
           </button>
@@ -52,7 +52,7 @@ const Navbar = () => {
             strokeWidth="2"
             viewBox="0 0 24 24"
           >
-            <BsCart2 />
+            <Link to="../Cart"><BsCart2 /></Link>
           </svg>
           <span className="absolute top-0 right-0 -mt-3 -mr-1 bg-red-500 text-white w-5 h-5 flex items-center justify-center rounded-full text-sm">
             0

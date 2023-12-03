@@ -63,7 +63,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 5,
@@ -106,7 +106,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 9,
@@ -150,7 +150,7 @@ const ProductGrid = () => {
       brand: "Z",
       feature: "Z",
       category: "E",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 13,
@@ -227,7 +227,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "Q",
       category: "A",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 20,
@@ -271,7 +271,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 24,
@@ -315,7 +315,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "E",
       category: "C",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 28,
@@ -359,7 +359,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "A",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 32,
@@ -370,7 +370,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "A",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 33,
@@ -414,7 +414,7 @@ const ProductGrid = () => {
       brand: "Z",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 38,
@@ -458,7 +458,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "E",
       category: "C",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 42,
@@ -502,7 +502,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "A",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 46,
@@ -557,7 +557,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 51,
@@ -623,7 +623,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 57,
@@ -667,7 +667,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 61,
@@ -700,7 +700,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 64,
@@ -766,7 +766,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 70,
@@ -810,7 +810,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 74,
@@ -843,7 +843,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 77,
@@ -909,7 +909,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 83,
@@ -953,7 +953,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 87,
@@ -986,7 +986,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 90,
@@ -1052,7 +1052,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "Q",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 96,
@@ -1096,7 +1096,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 100,
@@ -1118,7 +1118,7 @@ const ProductGrid = () => {
       brand: "X",
       feature: "Q",
       category: "A",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 102,
@@ -1151,7 +1151,7 @@ const ProductGrid = () => {
       brand: "Y",
       feature: "W",
       category: "B",
-      img: data.allFile.nodes[4].childImageSharp.fluid,
+      img: data.allFile.nodes[3].childImageSharp.fluid,
     },
     {
       id: 105,
@@ -1298,6 +1298,29 @@ const ProductGrid = () => {
     setColorVisible(!colorVisible);
   };
 
+
+  // State to track the current page
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  // Number of items to display per page
+  const itemsPerPage = 9;
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+
+  // Calculate the start and end index of the products to display on the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  
+  // Slice the products array to get the products for the current page
+  const currentProducts = products.slice(startIndex, endIndex);
+
+  // Function to handle page changes
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
+  
   return (
     <div>
       <div className="bg-gray-100 p-4 grid grid-cols-9 gap-4 ">
@@ -1660,34 +1683,45 @@ const ProductGrid = () => {
         </div>
 
         {/* Products */}
-        <div className="col-span-5 ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {products.slice(0, 9).map((product) => (
-              <div
-                key={product.id}
-                className="bg-white p-4 rounded hover:cursor-pointer border hover:shadow-lg"
-              >
-                <Img fluid={product.img} alt={product.name} />
+        <div className="col-span-5 flex flex-col justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {currentProducts.map((product) => (
+          <div
+            key={product.id}
+            className="bg-white p-4 rounded hover:cursor-pointer border hover:shadow-lg"
+          >
+            <Img fluid={product.img} alt={product.name} />
 
-                <p className="text-sm text-gray-500 mb-3 h-10">
-                  {product.name} <div className="space-y-2"> </div>
-                </p>
-                <div className="flex justify-between mb-3">
-                  <p className="text-sm font-semibold">{product.price}</p>
-                  <p>
-                    <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
-                  </p>{" "}
-                  {/* Heart Icon */}
-                </div>
-                <Link to="../about">
-                  <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
-                    Add to cart <BsCart2 className="mx-2" />
-                    {/* Cart Icon */}
-                  </button>
-                </Link>
-              </div>
-            ))}
+            <p className="text-sm text-gray-500 mb-3 h-10">{product.name}</p>
+            <div className="flex justify-between mb-3">
+              <p className="text-sm font-semibold">{product.price}</p>
+              <p>
+                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+              </p>
+            </div>
+            <Link to="../about">
+              <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
+                Add to cart <BsCart2 className="mx-2" />
+              </button>
+            </Link>
           </div>
+        ))}
+      </div>
+
+      {/* Pagination buttons */}
+      <div className="flex justify-center mt-4">
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <button
+            key={i + 1}
+            className={`mx-2 p-2 ${
+              i + 1 === currentPage ? 'bg-primary text-white' : 'bg-gray-300'
+            }`}
+            onClick={() => handlePageChange(i + 1)}
+          >
+            {i + 1}
+          </button>
+        ))}
+      </div>
         </div>
       </div>
     </div>

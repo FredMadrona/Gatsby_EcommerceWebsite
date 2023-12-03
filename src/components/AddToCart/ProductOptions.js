@@ -31,7 +31,7 @@ const ProductOptions = () => {
 
   return (
     <div className="mt-[5%]">
-      <div className=" ml-[10%]">
+      <div className=" ml-[5%]">
         <Link to="/"> <span className="text-sm text-gray-500 cursor-pointer hover:text-primary">
           Home /
         </span></Link>
@@ -48,12 +48,12 @@ const ProductOptions = () => {
           Stainless Steel Bathroom Hardware WWG17220{" "}
         </span>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 m-5 mx-[60px] ">
-        <div className="cols-span-1 flex lg:flex-col flex-row">
-          <div className="flex w-full  justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-[60px] ">
+        <div className="cols-span-1 flex lg:flex-col flex-row ">
+          <div className="flex w-full justify-center">
             <StaticImage
               src="../ProductImages/Hardware04.jpg"
-              className="lg:m-5  cursor-pointer "
+              className="lg:m-5 m-1  cursor-pointer "
             ></StaticImage>
           </div>
           <div className="flex lg:flex-row flex-col  gap-3 lg:w-full w-[20%] my-auto items-center lg:px-[5%]  h-auto">

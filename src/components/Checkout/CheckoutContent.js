@@ -39,7 +39,7 @@ const CheckoutContent = () => {
       <div className="grid grid-cols-12 bg-gray-100">
         <div className="col-span-1"> </div>
         <div className="col-span-10 flex lg:flex-row flex-col gap-5 p-5">
-          <div className="lg:w-[70%] w-auto h-[72%] bg-white rounded p-5 border border-primary">
+          <div className="lg:w-[70%] w-auto h-[72%] bg-white rounded p-5">
             <h1 className="lg:text-xl text-lg ml-3 pb-5 hover:font-semibold hover:underline cursor-pointer">
               {" "}
               Billing Address
