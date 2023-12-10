@@ -1,10 +1,16 @@
 /**
- * @type {import('gatsby').GatsbyConfig}
+ * @type {('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby-Ecommerce`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.hardwaresph.com`
   },
   plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
