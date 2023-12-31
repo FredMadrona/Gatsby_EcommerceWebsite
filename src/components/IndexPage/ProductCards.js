@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { BsHeart, BsCart2 } from "react-icons/bs";
+import HeartIcon from "./IndexPageImages/HeartIcon";
+import { BsCart2 } from "react-icons/bs";
 import { Link } from "gatsby";
 
 const ProductCards = () => {
@@ -34,7 +35,7 @@ const ProductCards = () => {
       </div>
       <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5 ">
         <div className="md:col-span-2 col-span-1"></div>
-        <div className="col-span-10 md:col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
+        <div className="col-span-10 md:col-span-8 grid lg:grid-cols-4 grid-cols-2 justify-evenly gap-5">
           <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
@@ -46,7 +47,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+                <HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -65,7 +66,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -84,7 +85,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -103,7 +104,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -128,7 +129,7 @@ const ProductCards = () => {
 
       <div className="grid grid-cols-12 gap-4 bg-gray-100 p-5 ">
         <div className="col-span-1 md:col-span-2"></div>
-        <div className="col-span-10 lg:col-span-8 grid md:grid-cols-4 grid-cols-2 justify-evenly gap-5">
+        <div className="col-span-10 md:col-span-8 grid lg:grid-cols-4 grid-cols-2 justify-evenly gap-5">
           <div className="col-span-1 bg-white p-4 rounded shadow-sm hover:cursor-pointer border hover:shadow-lg">
             <StaticImage src="../ProductImages/Hardware03.jpg"></StaticImage>
             <p className="text-sm text-gray-500 mb-3 h-10">
@@ -140,7 +141,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -159,7 +160,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -178,7 +179,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
@@ -197,7 +198,7 @@ const ProductCards = () => {
               {/* Heart Icon */}
               <p>
                 {" "}
-                <BsHeart className="text-gray-500 hover:cursor-pointer hover:text-primary" />
+<HeartIcon/>
               </p>
             </div>
             <button className="font-semibold text-black rounded-lg text-sm border-gray-300 br-md  p-2 flex items-center justify-center w-full border hover:text-white hover:bg-primary">
