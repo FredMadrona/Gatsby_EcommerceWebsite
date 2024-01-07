@@ -1,11 +1,24 @@
-import * as React from 'react'
-import IndexPageLayout from '../components/IndexPageLayout'
-const IndexPage = () => {
+import React from "react"
+
+import { isLoggedIn } from "../services/auth"
+import HomePageLayout from "../components/HomePageLayout"
+import Login from "../components/login"
+export default function index() {
   return (
-    <IndexPageLayout></IndexPageLayout>
+   
+      <p>
+        {isLoggedIn() ? (
+          <>
+        <HomePageLayout></HomePageLayout>
+           
+          </>
+        ) : (
+          <>
+         
+         <Login></Login>
+          </>
+        )}
+      </p>
+ 
   )
 }
-
-export const Head = () => <title> Home </title>
-
-export default IndexPage

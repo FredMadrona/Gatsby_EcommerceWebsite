@@ -9,13 +9,13 @@ const ProductCards = () => {
       <div className="bg-white grid md:grid-cols-2 grid-cols-1 ">
         <div className="col-span-1 m-5">
           <StaticImage
-            src="./IndexPageImages/DoorControl.png"
+            src="./HomePageImages/DoorControl.png"
             className="rounded cursor-pointer hover:shadow-md "
           ></StaticImage>
         </div>
         <div className="col-span-1 m-5">
           <StaticImage
-            src="./IndexPageImages/IntelligentDoorLock.png"
+            src="./HomePageImages/IntelligentDoorLock.png"
             className="rounded cursor-pointer hover:shadow-md "
           ></StaticImage>
         </div>
@@ -26,7 +26,7 @@ const ProductCards = () => {
           {" "}
           <h1 className="text-2xl lg:text-3xl ml-5 text-primary align-center font-bold ">
             {" "}
-            <Link to="ProductsPage" className="hover:underline">Popular Products</Link>
+            <Link to="/app/ProductsPage" className="hover:underline">Popular Products</Link>
           </h1>{" "}
         </div>
         <div className="md:col-span-2 col-span-1 "></div>
@@ -213,21 +213,21 @@ const ProductCards = () => {
         <div className="col-span-10 md:col-span-8 grid md:grid-cols-3 grid-cols-1 gap-5">
           <div className="col-span-1">
             <StaticImage
-              src="./IndexPageImages/IndexPageImage01.png"
+              src="./HomePageImages/IndexPageImage01.png"
               className="w-full h-full cursor-pointer hover:shadow-md rounded"
             />
           </div>
 
           <div className="col-span-1">
             <StaticImage
-              src="./IndexPageImages/IndexPageImage02.png"
+              src="./HomePageImages/IndexPageImage02.png"
               className="w-full h-full cursor-pointer hover:shadow-md rounded"
             />
           </div>
 
           <div className="col-span-1 bg-red text-white">
             <StaticImage
-              src="./IndexPageImages/IndexPageImage03.png"
+              src="./HomePageImages/IndexPageImage03.png"
               className="w-full h-full cursor-pointer hover:shadow-md rounded"
             />
           </div>

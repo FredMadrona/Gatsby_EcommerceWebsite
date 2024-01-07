@@ -1,12 +1,12 @@
 import * as React from "react";
 import "tailwindcss/tailwind.css";
 import Navbar from "./NavBar/Nav_bar.js";
-import HorizontalMenu from "./NavBar/HorizontalMenu";
+import HorizontalMenu from "./NavBar/HorizontalMenu.js";
 import FooterMenu from "./Footer/FooterMenu.js";
 import PaymentFooter from "./Footer/PaymentFooter.js";
 import DropdownMenu from "./NavBar/DropdownMenu.js";
-import ImageSlider from "../components/IndexPage/ImageSlider.js";
-import ProductCards from "./IndexPage/ProductCards.js";
+import ImageSlider from "./HomePage/ImageSlider.js";
+import ProductCards from "./HomePage/ProductCards.js";
 
 const IndexPageLayout = ({ pageTitle, children }) => {
     return (

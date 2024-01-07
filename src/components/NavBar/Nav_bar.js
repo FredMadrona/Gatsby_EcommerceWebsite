@@ -2,8 +2,12 @@
 import React from "react";
 import Logo from "./NavBarImages/Hardware_Logo.svg";
 import { BsCart2, BsPerson, BsSearch } from "react-icons/bs";
-import { Link } from "gatsby";
 import MenuButton from "../NavBar/MenuButton";
+import { Link, navigate } from "gatsby";
+import { isLoggedIn, logout } from "../../services/auth";
+
+// import {  isLoggedIn, logout } from "../services/auth";
+  
 
 const Navbar = () => {
   return (
@@ -11,7 +15,7 @@ const Navbar = () => {
             
       {/* Column 1: Logo */}
       <div className="flex items-center justify-center col-span-4  ">
-      <Link to="/" className=" hover:cursor-pointer ">
+      <Link to="/app/HomePage" className=" hover:cursor-pointer ">
         <img
           src={Logo}
           alt="Logo"
@@ -33,13 +37,20 @@ const Navbar = () => {
       <div className="md:flex flex-no-wrap hidden items-start justify-center gap-4 w-full md:col-span-4 col-span-2  ">
         <div className="flex flex-row items-center  gap-1 lg:mr-5">
           <BsPerson className="h-6 w-6 text-primary cursor-pointer " />
-          <button className="text-primary text-sm font-semibold hover:hover:text-blue-600 hover:underline ">
-            Login 
-          </button>
-          <span className="text-primary"> / </span>
-          <button className="text-primary text-sm font-semibold hover:hover:text-blue-600 hover:underline">
-            Sign up 
-          </button>
+          {` `}
+        <Link to="/app/HomePage" className="text-primary mr-5">Profile</Link>
+        {` `}
+        {isLoggedIn() ? (
+          <a className="text-primary"
+            href="/"
+            onClick={event => {
+              event.preventDefault()
+              logout(() => navigate(`/app/login`))
+            }}
+          >
+            Logout
+          </a>
+        ) : null}
           
         </div>
 
