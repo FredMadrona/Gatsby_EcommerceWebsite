@@ -8,7 +8,7 @@ import Checkout from "./Checkout"
 import ProductsPage from "./ProductsPage"
 import Login from "../components/login"
 import HomePage from "./Home"
-
+import Profile from "./Profile"
 
 const App = () => (
   <Layout>
@@ -18,6 +18,7 @@ const App = () => (
       <PrivateRoute path="/app/about" component={AboutPage} />
       <PrivateRoute path="/app/Checkout" component={Checkout} />
       <PrivateRoute path="/app/ProductsPage" component={ProductsPage} />
+      <PrivateRoute path="/app/Profile" component={Profile} />
             <Login path="/app/login" />
     </Router>
   </Layout>

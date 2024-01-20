@@ -8,7 +8,7 @@ import DropdownMenu from "./NavBar/DropdownMenu.js";
 import ImageSlider from "./HomePage/ImageSlider.js";
 import ProductCards from "./HomePage/ProductCards.js";
 
-const IndexPageLayout = ({ pageTitle, children }) => {
+const HomePageLayout = ({ pageTitle, children }) => {
     return (
       <div>
         <Navbar> </Navbar>
@@ -18,10 +18,10 @@ const IndexPageLayout = ({ pageTitle, children }) => {
        </div>
         <main>
         <div className="flex justify-center align-center">
-      {/* Other content on your page */}
+    
       <ImageSlider />
      
-      {/* More content */}
+      
     </div>
    
     <ProductCards></ProductCards>
@@ -33,5 +33,5 @@ const IndexPageLayout = ({ pageTitle, children }) => {
     );
   };
   
-  export default IndexPageLayout;
+  export default HomePageLayout;
   

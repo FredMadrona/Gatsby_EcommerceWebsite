@@ -1713,8 +1713,8 @@ const ProductGrid = () => {
         {Array.from({ length: totalPages }).map((_, i) => (
           <button
             key={i + 1}
-            className={`mx-2 p-2 ${
-              i + 1 === currentPage ? 'bg-primary text-white' : 'bg-gray-300'
+            className={`mx-2 p-3 rounded text-sm ${
+              i + 1 === currentPage ? 'bg-primary text-white ' : 'bg-gray-300 '
             }`}
             onClick={() => handlePageChange(i + 1)}
           >

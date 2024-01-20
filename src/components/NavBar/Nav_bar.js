@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="flex flex-row items-center  gap-1 lg:mr-5">
           <BsPerson className="h-6 w-6 text-primary cursor-pointer " />
           {` `}
-        <Link to="/app/HomePage" className="text-primary mr-5">Profile</Link>
+        <Link to="/app/Profile" className="text-primary mr-5">Profile</Link>
         {` `}
         {isLoggedIn() ? (
           <a className="text-primary"
