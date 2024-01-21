@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const SaleProducts = () => {
   return (
-    <div className="mx-[10%] my-5 ">
+    <div className="lg:mx-[5%] my-5 ">
       <div className="card bg-white border p-5">
         <div className="border-b card-body border-gray-50 ">
           <div className="flex">
@@ -87,10 +87,10 @@ const SaleProducts = () => {
                     </p>
                     <div>
                       <div className="inline-flex align-center ">
-                      <Link className="text-violet-500 mr-2">
+                      <Link className="text-primary font-semibold hover:mr-3 mr-2 cursor-pointer transition-all duration-300 ease-in-out" >
                         Read more 
                       </Link>
-                      <FaArrowRight className="text-violet-500 mt-1.5 text-sm"/>
+                      <FaArrowRight className="text-primary mt-1.5 text-sm "/>
                       </div>
                     </div>
                   </div>
@@ -168,11 +168,11 @@ const SaleProducts = () => {
                       amet
                     </p>
                     <div>
-                      <div className="inline-flex align-center ">
-                      <Link className="text-violet-500 mr-2">
+                    <div className="inline-flex align-center ">
+                      <Link className="text-primary font-semibold hover:mr-3 mr-2 cursor-pointer transition-all duration-300 ease-in-out" >
                         Read more 
                       </Link>
-                      <FaArrowRight className="text-violet-500 mt-1.5 text-sm"/>
+                      <FaArrowRight className="text-primary mt-1.5 text-sm "/>
                       </div>
                     </div>
                   </div>
@@ -249,11 +249,11 @@ const SaleProducts = () => {
                       amet
                     </p>
                     <div>
-                      <div className="inline-flex align-center ">
-                      <Link className="text-violet-500 mr-2">
+                    <div className="inline-flex align-center ">
+                      <Link className="text-primary font-semibold hover:mr-3 mr-2 cursor-pointer transition-all duration-300 ease-in-out" >
                         Read more 
                       </Link>
-                      <FaArrowRight className="text-violet-500 mt-1.5 text-sm"/>
+                      <FaArrowRight className="text-primary mt-1.5 text-sm "/>
                       </div>
                     </div>
                   </div>

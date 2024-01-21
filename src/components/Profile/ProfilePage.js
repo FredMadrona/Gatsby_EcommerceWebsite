@@ -5,9 +5,9 @@ import { BsThreeDots } from "react-icons/bs";
 
 const ProfilePage = () => {
   return (
-    <div>
+    <div className=" ">
       {/* Profile Card */}
-      <div className="card shadow-md p-5 lg:mx-[10%] mt-5">
+      <div className="card shadow-md p-5  mt-5 lg:mx-[5%]">
         <div className="card-body ">
           <div className="grid grid-cols-12 ">
             <div className="col-span-9  ">
@@ -51,7 +51,7 @@ const ProfilePage = () => {
           </div>
           <div className="nav-tabs border-b-tabs">
             <ul
-              className="flex flex-wrap w-full text-sm font-medium text-center text-violet-500 nav  border-t  pt-5  mt-6 "
+              className="flex flex-wrap w-full text-sm font-medium text-center text-primary  nav  border-t  pt-5  mt-6 "
               id="pills-tab"
             >
               <li>
@@ -77,7 +77,7 @@ const ProfilePage = () => {
         </div>
       </div>
       {/* Profile Card end */}
-      <div className="card bg-white shadow-md p-5 lg:mx-[10%] mt-5">
+      <div className="card bg-white shadow-md p-5 lg:mx-[5%] mt-5">
         <div className="border-b card-body border-gray-50 bg-white">
           <h5 className="text-black text-15 hover:text-primary cursor-pointer">Overview</h5>
         </div>

@@ -8,6 +8,7 @@ import DropdownMenu from "./NavBar/DropdownMenu.js";
 import ImageSlider from "./HomePage/ImageSlider.js";
 import ProductCards from "./HomePage/ProductCards.js";
 
+
 const HomePageLayout = ({ pageTitle, children }) => {
     return (
       <div>
@@ -21,14 +22,15 @@ const HomePageLayout = ({ pageTitle, children }) => {
     
       <ImageSlider />
      
-      
-    </div>
+          </div>
    
     <ProductCards></ProductCards>
         </main>
          
         <FooterMenu> </FooterMenu>
         <PaymentFooter> </PaymentFooter>
+
+        
       </div>
     );
   };
