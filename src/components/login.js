@@ -57,7 +57,7 @@ class Login extends React.Component {
     return (
       <div>
         <div className="grid grid-cols-12 ">
-          <div className="md:col-span-5 lg:col-span-3 col-span-12 justify-center border h-screen flex-col p-5 ">
+          <div className="md:col-span-5 lg:col-span-4 col-span-12 justify-center border h-screen flex-col p-5 ">
             <div className="flex-col justify-center align-center w-full mb-5 p-3">
               <StaticImage
                 src="../components/NavBar/NavBarImages/Hardware_Logo.svg"
@@ -72,7 +72,7 @@ class Login extends React.Component {
               </p>
             </div>
             {/* form */}
-            <div className="p-5 mt-5"> 
+            <div className="p-5 mt-5">
               <form
                 className="w-full flex justify-center flex-col gap-3 mx-1"
                 method="post"
@@ -144,19 +144,24 @@ class Login extends React.Component {
                 - Sign in with -{" "}
               </p>
               <div className="flex justify-center gap-5 mt-4 align-center">
-              <FaFacebook className="cursor-pointer hover:text-primary w-5 h-5 "/>
-              <FaXTwitter className="cursor-pointer hover:text-primary w-5 h-5 "/>
-              <FaGoogle className="cursor-pointer hover:text-primary w-5 h-5 "/>
-
+                <FaFacebook className="cursor-pointer hover:text-primary w-5 h-5 " />
+                <FaXTwitter className="cursor-pointer hover:text-primary w-5 h-5 " />
+                <FaGoogle className="cursor-pointer hover:text-primary w-5 h-5 " />
               </div>
             </div>
 
-            <div className="flex w-full justify-center mt-10 align-middle"> 
-              <p className="text-xs text-gray-400">Don't have an account ?</p> <span className="text-xs text-primary font-bold ml-1 cursor-pointer hover:underline">Sign up now</span>
+            <div className="flex w-full justify-center mt-10 align-middle">
+              <p className="text-xs text-gray-400">Don't have an account ?</p>{" "}
+              <span className="text-xs text-primary font-bold ml-1 cursor-pointer hover:underline">
+                Sign up now
+              </span>
             </div>
-            <div className="w-full justify-center text-center text-gray-400 mt-5">   <p className="text-xs"> &copy; 2024 HardwaresPH </p> </div>
+            <div className="w-full justify-center text-center text-gray-400 mt-5">
+              {" "}
+              <p className="text-xs"> &copy; 2024 HardwaresPH </p>{" "}
+            </div>
           </div>
-          <div className="md:col-span-9  bg-primary w-full"></div>
+          <div className="md:col-span-8   bg-primary w-full"></div>
         </div>
       </div>
     );

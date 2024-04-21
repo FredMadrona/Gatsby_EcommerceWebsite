@@ -23,7 +23,7 @@ const Navbar = () => {
         />
         </Link>
       </div>
-
+    {/* Column 2: search bar */}
       <div className="flex items center md:col-span-4 col-span-6">
         <div className="relative flex items-start q w-full ">
           <input
@@ -34,6 +34,7 @@ const Navbar = () => {
           <BsSearch className="absolute right-3 top-3 text-primary" />
         </div>
       </div>
+ {/* Column 2: hamburger Menu  */}
       <div className="md:flex flex-no-wrap hidden items-start justify-center gap-4 w-full md:col-span-4 col-span-2  ">
         <div className="flex flex-row items-center  gap-1 lg:mr-5">
           <BsPerson className="h-6 w-6 text-primary cursor-pointer " />

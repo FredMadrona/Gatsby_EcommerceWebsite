@@ -79,7 +79,7 @@ const ProfilePage = () => {
       {/* Profile Card end */}
       <div className="card bg-white shadow-md p-5 lg:mx-[5%] mt-5">
         <div className="border-b card-body border-gray-50 bg-white">
-          <h5 className="text-black text-15 hover:text-primary cursor-pointer">Overview</h5>
+          <h5 className="text-primary font-semibold text-15 cursor-pointer">Overview</h5>
         </div>
         <div className="card-body">
           <div>

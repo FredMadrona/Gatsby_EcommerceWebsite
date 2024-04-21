@@ -12,7 +12,7 @@ const SaleProducts = () => {
         <div className="border-b card-body border-gray-50 ">
           <div className="flex">
             <div className="grow">
-              <h5 className="text-primary font-semibold text-15 ">Top Selling </h5>
+              <h5 className="text-primary font-semibold text-15 cursor-pointer ">Top Selling </h5>
             </div>
             <div className="">
               <Link className="font-medium text-violet-500">View All</Link>

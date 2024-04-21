@@ -148,17 +148,17 @@ const ProductOptions = () => {
             <p className="font-semibold lg:text-md text-sm mb-3"> Colours: </p>
             <div className="flex flex-row gap-5">
               <button
-                className="rounded-full cursor-pointer p-5 p-3 border border-gray-400"
+                className="rounded-full cursor-pointer p-5 border border-gray-400"
                 style={{ backgroundColor: "#ffcc99" }}
                 aria-label="Color: Light Orange"
               ></button>
               <button
-                className="rounded-full cursor-pointer p-5 p-3 border border-gray-400"
+                className="rounded-full cursor-pointer p-5 border border-gray-400"
                 style={{ backgroundColor: "#333333" }}
                 aria-label="Color: Dark Gray"
               ></button>
               <button
-                className="rounded-full cursor-pointer p-5 p-3 border border-gray-400"
+                className="rounded-full cursor-pointer p-5 border border-gray-400"
                 style={{ backgroundColor: "#666633" }}
                 aria-label="Color: Olive Green"
               ></button>
